@@ -18,10 +18,12 @@ mongo = PyMongo
 
 
 @app.route("/")
-
 @app.route("/frontpage")
 def frontpage():
     return render_template("frontpage.html")
+
+
+@app.route("/")
 
 
 if __name__ == "__main__":
