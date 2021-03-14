@@ -20,7 +20,7 @@ mongo = PyMongo
 @app.route("/")
 @app.route("/frontpage")
 def frontpage():
-    return render_template("frontpage.html")
+    return render_template("front_page.html")
 
 
 @app.route("/")
