@@ -20,33 +20,35 @@ Wireframe and user flowchart can be found in the documentation folder.
 
 
 ## 2. Updates Timeline.
-> 0.1 2021-03-14
+> 0.1 **2021-03-14**
 > > Created app on heroku and configured Config Vars<br>
 > > Added User Flowchart <br>
 > > Added wireframe <br>
 > > Added Static and Templates folder <br>
-> > Set up app.py with dependencies
-> > set up requirements.txt
-> > set up env.py
-> > added template extentions from base.html
-> > extended base.html to front_page.html
+> > Set up app.py with dependencies<br>
+> > set up requirements.txt<br>
+> > set up env.py<br>
+> > added template extentions from base.html<br>
+> > extended base.html to front_page.html<br>
+> > frontpage now renders current recipes from MongoDB<br>
+> > 
 
 ## 3. Planned Updates. (In order of prioritization)
-> Implement Search Function
-> Implement User auth
-> Implement Creating of Recipes
-> Implement Updating Recipes
-> Implement Deleting Recipes
+> Implement Search Function<br>
+> Implement User auth<br>
+> Implement Creating of Recipes<br>
+> Implement Updating Recipes<br>
+> Implement Deleting Recipes<br>
 
 ## 4. Bugs & Errors.
 1. 2021-03-14
-> Expected Result:
+> **Expected Result:**
 > > Applying a Jinja for loop in front_page.html would render on screen in the preview.
 
-> Actual Result:
+> **Actual Result:**
 > > The Jinja for loop renders the HTML element to store the database data from MongoDB but renders the elements empty, regardless of the database thats injected
 
-> Resolved Y/N:
+> **Resolved Y/N:**
 > > Y 2021-03-14
 
 ## 5. Additional Comments.
