@@ -21,10 +21,10 @@ Wireframe and user flowchart can be found in the documentation folder.
 
 ## 2. Updates Timeline.
 > 0.1 2021-03-14
->> Created app on heroku and configured Config Vars<br>
->> Added User Flowchart <br>
->> Added wireframe <br>
->> Added Static and Templates folder <br>
+> > Created app on heroku and configured Config Vars<br>
+> > Added User Flowchart <br>
+> > Added wireframe <br>
+> > Added Static and Templates folder <br>
 
 ## 3. Planned Updates. (In order of prioritization)
 > Implement Search Function
@@ -34,6 +34,15 @@ Wireframe and user flowchart can be found in the documentation folder.
 > Implement Deleting Recipes
 
 ## 4. Bugs & Errors.
+1. 2021-03-14
+> Expected Result:
+> > Applying a Jinja for loop in front_page.html would render on screen in the preview.
+
+> Actual Result:
+> > The Jinja for loop renders the HTML element to store the database data from MongoDB but renders the elements empty, regardless of the database thats injected
+
+> Resolved Y/N:
+> > N
 
 ## 5. Additional Comments.
 
