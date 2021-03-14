@@ -3,24 +3,29 @@
 
     <h3 class="teal-text darken-2 center-align">All Recipes</h3>
 
-    <ul class="collapsible popout">
-        {% for recipe in recipes %}
-            <li>
-                <div class="collapsible-header black-text teal lighten-2">
-                    <div class="col s3">
-                        <!-- future functionality to delete and edit recipes -->
+    {% if recipe|lenght > 0 %}
+        <ul class="collapsible popout">
+            {% for recipe in recipes %}
+                <li>
+                    <div class="collapsible-header black-text teal lighten-2">
+                        <div class="col s3">
+                            <!-- future functionality to delete and edit recipes -->
+                        </div>
+                        <div class="col s9">
+                            <strong>{{ recipe.recipe_name }}</strong>
+                        </div>
                     </div>
-                    <div class="col s9">
-                        <strong>{{ recipes.recipe_name }}</strong>
+                    <div class="collapsable-body">
+                        <strong> {{ recipe.category_name }}</strong>
+                        <p> {{ recipe.recipe_desc }} </p>
                     </div>
-                </div>
-                <div class="collapsable-body">
-                    <strong> {{ recipes.category_name }}</strong>
-                    <p> {{ recipes.recipe_desc }} </p>
-                </div>
-            </li>
-        {% endfor %}
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <h3 class="red-text text-darken-3 centeralign">No Results Found</h3>
+    {% endif %}
 
-    </ul>
+
 
 {% endblock %}
