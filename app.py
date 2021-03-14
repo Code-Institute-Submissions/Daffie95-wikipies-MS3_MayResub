@@ -21,7 +21,7 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/frontpage")
 def frontpage():
-    tasks = list(mongo.db.tasks.find())
+    tasks = list(mongo.db.tasks.findOne())
     return render_template('front_page.html', tasks=tasks)
 
 
