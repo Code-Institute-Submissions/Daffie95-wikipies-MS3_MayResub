@@ -16,9 +16,6 @@
                     </div>
                     <div class="collapsible-body">
                         <p>{{ recipe.description }}</p>
-                        {% for ingridient in ingredients %}
-                            <ul>{{ ingridient.ingridients }}</ul>
-                        {% endfor %}
                         <p><em>Written by: {{ recipe.created_by }}</em></p>
                     </div>
                 </div>
