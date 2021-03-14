@@ -25,7 +25,7 @@ def frontpage():
     return render_template("frontpage.html", recipes=recipes)
 
 
-if __name__ = "__main__":
+if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
     port=int(os.environ.get("PORT")),
     debug=True)
