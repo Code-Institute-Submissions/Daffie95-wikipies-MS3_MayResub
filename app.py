@@ -18,8 +18,6 @@ mongo = PyMongo(app)
 
 # routing function for frontpage
 @app.route("/")
-
-
 @app.route("/frontpage")
 def frontpage():
     recipes = list(mongo.db.recipes.find())
