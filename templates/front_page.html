@@ -18,11 +18,13 @@
                 <div class="collapsible-body">
                     <strong>{{ recipe.category }}</strong>
                     <p>{{ recipe.recipe_desc }}</p>
-                    {% for ingredients in recipe %}
-                        <ul>
-                            {{ recipe.ingredients }}
-                        </ul>
+                    <ul>
+                    {% for key, value in recipe.iteritems() %}
+                        <dt>{{ key }}{{ value }}</dt>
+
+                        
                     {% endfor %}
+                    </ul>
                 </div>
             </li>
         {% endfor %}
