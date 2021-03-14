@@ -22,7 +22,7 @@ mongo = PyMongo(app)
 @app.route("/frontpage")
 def frontpage():
     test = mongo.db.tester.find()
-    return render_template('front_page.html', tester=tester)
+    return render_template('front_page.html', test=test)
 
 
 if __name__ == "__main__":
