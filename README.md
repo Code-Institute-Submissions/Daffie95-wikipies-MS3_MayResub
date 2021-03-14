@@ -42,7 +42,7 @@ Wireframe and user flowchart can be found in the documentation folder.
 > > The Jinja for loop renders the HTML element to store the database data from MongoDB but renders the elements empty, regardless of the database thats injected
 
 > Resolved Y/N:
-> > N
+> > Y 2021-03-14
 
 ## 5. Additional Comments.
 
