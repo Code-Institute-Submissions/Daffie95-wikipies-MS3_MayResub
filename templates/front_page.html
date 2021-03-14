@@ -3,11 +3,11 @@
 
 <h3 class="teal-text darken-2 center-align">All Recipes</h3>
 
-{% for recipe in recipes %}
-    {{ recipe.recipe_name }}
-    {{ recipe.recipe_desc }}
-    {{ recipe.category }}
-{% endfor %}
+    {% for recipe in recipes %}
+        {{ recipe.recipe_name }}
+        {{ recipe.recipe_desc }}
+        {{ recipe.category }}
+    {% endfor %}
 
 
 
