@@ -3,24 +3,23 @@
 
     <h3 class="teal-text darken-2 center-align">All Recipes</h3>
 
-
     <ul class="collapsible">
         {% for recipe in recipes %}
-            <li>
-                <div class="collabsible-header white-text teal lighten-2">
-                    <div class="col s3">
-                        <strong>{{ recipe.recipe_name }}</strong>
-                    </div>
-                    <div class="col s9">
-                        
-                    </div>
-                    <div class="collapsible-body">
-                        <p>{{ recipe.description }}</p>
-                    </div>
+        <li>
+            <div class="collapsible-header white-text teal lighten-2">
+                <div class="col s3">
+                    <a href="#" class="btn-small waves-effect waves-light green">Edit</a>
                 </div>
-            </li>
-        {% endfor %}
+                <div class="col s9">
+                    <strong>{{ recipe.recipe_name }}</strong>
+                </div>
+
+            </div>
+        </li>
     </ul>
+
+
+    
 
 
 
