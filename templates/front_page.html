@@ -12,18 +12,18 @@
                             <!-- future functionality to delete and edit recipes -->
                         </div>
                         <div class="col s9">
-                            <strong>{{ recipe.recipe_name }}</strong>
+                            <strong>{{ recipes.recipe_name }}</strong>
                         </div>
                     </div>
                     <div class="collapsable-body">
-                        <strong> {{ recipe.category_name }}</strong>
-                        <p> {{ recipe.recipe_desc }} </p>
+                        <strong> {{ recipes.category_name }}</strong>
+                        <p> {{ recipes.recipe_desc }} </p>
                     </div>
                 </li>
             {% endfor %}
         </ul>
     {% else %}
-        <h3 class="red-text text-darken-3 centeralign">No Results Found</h3>
+        <h3 class="red-text text-darken-3 center-align">No Results Found</h3>
     {% endif %}
 
 

@@ -18,10 +18,12 @@ mongo = PyMongo(app)
 
 # routing function for frontpage
 @app.route("/")
+
+
 @app.route("/frontpage")
 def frontpage():
-    recipe = list(mongo.db.recipes.find())
-    return render_template("front_page.html", recipe=recipe)
+    recipes = list(mongo.db.recipes.find())
+    return render_template("front_page.html", recipes=recipes)
 
 
 
