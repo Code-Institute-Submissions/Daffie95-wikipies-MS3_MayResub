@@ -1,12 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="teal-text darken-2 center-align">All Recipes</h3>
+    <h3 class="teal-text darken-2 center-align">All Recipes</h3>
 
-    {% for tester in test %}
-        {{ tester.name }}
-    {% endfor %}
-
+    <div>
+        <ul>
+            {% for tester in test %}
+            <li>{{ tester.name }}</li>
+            {% endfor %}
+        </ul>
+    </div>
 
 
 
