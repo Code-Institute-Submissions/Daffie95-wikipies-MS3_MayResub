@@ -3,7 +3,9 @@
 
 <h3 class="teal-text darken-2 center-align">All Recipes</h3>
 
-   {{ recipes }}
+   {% for recipe in recipes %}
+    {{ recipe.category }}
+   {% endfor %}
 
 
 
