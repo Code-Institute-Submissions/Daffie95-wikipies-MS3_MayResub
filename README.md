@@ -25,6 +25,11 @@ Wireframe and user flowchart can be found in the documentation folder.
 > > Added User Flowchart <br>
 > > Added wireframe <br>
 > > Added Static and Templates folder <br>
+> > Set up app.py with dependencies
+> > set up requirements.txt
+> > set up env.py
+> > added template extentions from base.html
+> > extended base.html to front_page.html
 
 ## 3. Planned Updates. (In order of prioritization)
 > Implement Search Function
