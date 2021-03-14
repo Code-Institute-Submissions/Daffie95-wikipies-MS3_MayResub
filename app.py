@@ -16,11 +16,12 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo
 
-
+# routing function for frontpage
 @app.route("/")
 @app.route("/frontpage")
 def frontpage():
-    return render_template("front_page.html")
+    recipes = list(mongo.db.recipes.find())
+    return render_template("front_page.html", recipes=recipes)
 
 
 
