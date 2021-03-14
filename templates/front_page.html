@@ -19,7 +19,7 @@
                     <strong>{{ recipe.category }}</strong>
                     <p>{{ recipe.recipe_desc }}</p>
                     <ul>
-                    {% for key, value in recipe.iteritems() %}
+                    {% for key, value in recipe.ingredients %}
                         <dt>{{ key }}{{ value }}</dt>
 
                         
