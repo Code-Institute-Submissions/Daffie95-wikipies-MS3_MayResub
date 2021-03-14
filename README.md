@@ -27,6 +27,11 @@ Wireframe and user flowchart can be found in the documentation folder.
 >> Added Static and Templates folder <br>
 
 ## 3. Planned Updates. (In order of prioritization)
+> Implement Search Function
+> Implement User auth
+> Implement Creating of Recipes
+> Implement Updating Recipes
+> Implement Deleting Recipes
 
 ## 4. Bugs & Errors.
 
