@@ -19,7 +19,7 @@
                     <strong>{{ recipe.category }}</strong>
                     <p>{{ recipe.recipe_desc }}</p>
                     <strong>ingredients needed:</strong>
-                    <p>{{ recipe.ingredients }}</p>
+                    <p>{{ recipe.ingredients|replace(",", " ") }}</p>
                 </div>
             </li>
         {% endfor %}
