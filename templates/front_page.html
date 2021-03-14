@@ -12,8 +12,12 @@
                         <a href="#" class="btn-small waves-effect waves-light green">Edit</a>
                     </div>
                     <div class="col s9">
-                        <strong>{{ recipe.recipe_name }}</strong> : {{ recipe.created_by }}
+                        <strong>{{ recipe.recipe_name }}</strong>  Written by: {{ recipe.created_by }}
                     </div>
+                </div>
+                <div class="collapsible-body">
+                    <strong>{{ recipe.category }}</strong>
+                    <p>{{ recipe.recipe_desc }}</p>
                 </div>
             </li>
         {% endfor %}
