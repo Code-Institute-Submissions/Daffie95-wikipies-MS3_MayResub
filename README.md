@@ -20,7 +20,8 @@ Wireframe and user flowchart can be found in the documentation folder.
 
 
 ## 2. Updates Timeline.
-> 0.1
+> 0.1 2021-03-14
+>> Created app on heroku and configured Config Vars<br>
 >> Added User Flowchart <br>
 >> Added wireframe <br>
 >> Added Static and Templates folder <br>
