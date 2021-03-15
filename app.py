@@ -57,7 +57,7 @@ def register():
 # future return statement for profile page
 # return redirect(url_for("profile", username=session["user"]))
 
-
+# function to check wether user credentials are in the database and put user in session
 @app.route("login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
