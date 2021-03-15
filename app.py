@@ -105,7 +105,7 @@ def profile(username):
         return render_template("profile_page.html", username=username)
 
 @app.route("/upload_recipe", methods=["GET", "POST"])
-def upload_recipe:
+def upload_recipe():
     if request.method == "POST":
         recipe = {
             "recipe_name": request.form.get("recipe_name"),
