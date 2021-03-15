@@ -19,6 +19,8 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 # route function to ensure that any empty routes renders the frontpage
+
+
 @app.route("/")
 # route function to render the frontpage and all current recepies
 @app.route("/frontpage")
@@ -27,6 +29,8 @@ def frontpage():
     return render_template('front_page.html', recipes=recipes)
 
 # route function to render the search function
+
+
 @app.route("/search", methods=["GET", "POST"])
 def search():
     # using indexing on the database to create a search function
@@ -35,6 +39,8 @@ def search():
     return render_template("front_page.html", recipes=recipes)
 
 # route function to render the register page
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -63,6 +69,8 @@ def register():
 # function to check wether user credentials are in the database and put user in session
 
 # route function to render the login page
+
+
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -92,11 +100,14 @@ def login():
     return render_template('login_page.html')
 
 # route function to log out current session user with .pop()
+
+
 @app.route("/logout")
 def logout():
     flash("You have logged out")
     session.pop("user")
     return redirect(url_for("login"))
+
 
 # route function to render current session user's profile page
 @app.route("/profile/<username>", methods=["GET", "POST"])
@@ -106,6 +117,7 @@ def profile(username):
         {"username": session["user"]})["username"]
     if session["user"]:
         return render_template("profile_page.html", username=username, recipes=recipes)
+
 
 # route function for uploading new recipes
 @app.route("/upload_recipe", methods=["GET", "POST"])
@@ -139,8 +151,9 @@ def upload_recipe():
         mongo.db.recipes.insert_one(recipe)
         flash("Recipe has been added!")
         return redirect(url_for("frontpage"))
-    
+
     return render_template('upload_page.html')
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
