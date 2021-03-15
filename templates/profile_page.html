@@ -11,18 +11,15 @@
         </div>
     </div>
     {% if recipes|length > 0 %}
-    <!-- collapsible to store recipes -->
         {% for recipe in recipes if session.user == recipes.created_by %}
             <ul class="collapsible popout">
                 <li>
                     <div class="collapsible-header white-text teal lighten-2 col s12">
                         <div class="col s3">
-                            <!-- button for future edit use -->
                             <a href="#" class="btn-small waves-effect waves-light green">Edit</a>
                         </div>
                         <div class="col s9">
                             <strong>{{ recipe.recipe_name|capitalize }}</strong> Written by: {{ recipe.created_by|capitalize }}
-                            <!-- Jinja statements to conditionally check for allergens -->
                             {% if recipe.gluten == "on" %}
                                 <i class="material-icons white-text tooltipped" data-position="top"
                                     data-tooltip="Contains Gluten">looks_one</i>
@@ -49,7 +46,6 @@
                             {% endif %}
                         </div>
                     </div>
-                    <!-- collapsible body returns category, description, and ingredients -->
                     <div class="collapsible-body">
                         <strong>This is a {{ recipe.category|capitalize }} recipe</strong>
                         <h6>Steps:</h6>
@@ -60,7 +56,7 @@
                 </li>
             </ul>
         {% endif %}
-    <!-- else function when no searches were found -->
+    {% endif %}
     {% else %}
         <h4 class="red-text text-lighten-1 center align">No Recipes Found</h4>
     {% endif %}
