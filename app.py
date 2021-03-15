@@ -86,7 +86,7 @@ def login():
             flash("Password and/or Username is Incorrect")
             return redirect(url_for("login"))
 
-    return render_template(url_for("login_page.html"))
+    return render_template(url_for('login_page.html'))
 
 
 if __name__ == "__main__":

@@ -67,16 +67,6 @@ Wireframe and user flowchart can be found in the documentation folder.
 > style app with CSS
 
 ## 4. Bugs & Errors.
-2. 2021-03-15
-> **Expected Result:**
-> > using the correct column size would display the search elements and the collapsible element as the same width
-
-> **Actual Result:**
-> > the search and collapsible elements does not align
-
-> **Resolved Y/N:**
-> > ***N***
-
 
 1. 2021-03-14
 > **Expected Result:**
@@ -87,6 +77,28 @@ Wireframe and user flowchart can be found in the documentation folder.
 
 > **Resolved Y/N:**
 > > ***Y 2021-03-14***
+
+2. 2021-03-15
+> **Expected Result:**
+> > using the correct column size would display the search elements and the collapsible element as the same width
+
+> **Actual Result:**
+> > the search and collapsible elements does not align
+
+> **Resolved Y/N:**
+> > ***N***
+
+3. 2021-03-15
+> **Expected Result:**
+> > Using the implemented python function should render a fully functional and rendered login_page.html, that retrieves data from database to match<br>
+> > user credentials. 
+> 
+> **Actual Result:**
+> > Page does not load and [TO_MANY_REDIRECTS], and heroku returns a HTTP code of 302.
+
+> **Resolved Y/N:**
+> ***Y*** The 302 code indicates redirecting, but the log does not show an endpoint, leading to a probable error in the routing for the page.
+> resolved by editing the /login function with correct indentation.
 
 ## 5. Additional Comments.
 
