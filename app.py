@@ -131,7 +131,7 @@ def upload_recipe():
         fish = "on" if request.form.get("fish") else "off"
         # the dictionary pulls content from the input fields on upload_page.html
         # and inserts it into the database
-        recipe = {
+        new_recipe = {
             "recipe_name": request.form.get("recipe_name"),
             "category": request.form.get("category"),
             "gluten": gluten,
@@ -147,7 +147,7 @@ def upload_recipe():
             "created_by": session["user"]
         }
         # inserts the dictionary "recipe" in the database
-        mongo.db.recipes.insert_one(recipe)
+        mongo.db.recipes.insert_one(new_recipe)
         flash("Recipe has been added!")
         return redirect(url_for("frontpage"))
 
