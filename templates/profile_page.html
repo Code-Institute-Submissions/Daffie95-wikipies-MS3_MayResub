@@ -12,7 +12,7 @@
     </div>
     {% if recipes|length > 0 %}
 <!-- collapsible to store recipes -->
-        {% if session.user|lower == recipe.created_by|lower %}
+        {% if session.user|lower == recipes.created_by|lower %}
             <ul class="collapsible popout">
                 {% for recipe in recipes %}
                 <li>
