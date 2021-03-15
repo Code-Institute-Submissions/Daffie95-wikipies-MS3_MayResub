@@ -59,17 +59,14 @@ def register():
             "password": generate_password_hash(request.form.get("password").lower())
         }
         mongo.db.users.insert_one(register)
-
+        # function to check wether user credentials are in the database and put user in session
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful!")
         redirect(url_for("profile", username=session["user"]))
     return render_template('register_page.html')
 
-# function to check wether user credentials are in the database and put user in session
 
 # route function to render the login page
-
-
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -152,6 +149,9 @@ def upload_recipe():
         return redirect(url_for("frontpage"))
 
     return render_template('upload_page.html')
+
+
+
 
 
 if __name__ == "__main__":
