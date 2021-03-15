@@ -99,10 +99,11 @@ def logout():
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
+    recipes = list(mongo.db.recipes.find())
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
     if session["user"]:
-        return render_template("front_page.html", "profile_page.html", username=username)
+        return render_template("profile_page.html", username=username)
 
 @app.route("/upload_recipe", methods=["GET", "POST"])
 def upload_recipe():
@@ -127,7 +128,7 @@ def upload_recipe():
             "steps": request.form.get("steps").lower(),
             "recipe_desc": request.form.get("recipe_desc").lower(),
             "recipe_steps": request.form.get("recipe_steps").lower(),
-            "created_by": session["user"]
+            "created_by": session["user"].lower()
         }
         mongo.db.recipes.insert_one(recipe)
         flash("Recipe has been added!")
