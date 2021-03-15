@@ -23,7 +23,6 @@
 
 
 {% if recipes|length > 0 %}
-<!-- collapsible to store recipes -->
 <ul class="collapsible">
     {% for recipe in recipes %}
     <li>
@@ -35,7 +34,6 @@
             </div>
             <div class="col s9">
                 <strong>{{ recipe.recipe_name|capitalize }}</strong> Written by: {{ recipe.created_by|capitalize }}
-                <!-- Jinja statements to conditionally check for allergens -->
                 {% if recipe.gluten == "on" %}
                     <i class="material-icons white-text tooltipped" data-position="top"
                     data-tooltip="Contains Gluten">looks_one</i>
