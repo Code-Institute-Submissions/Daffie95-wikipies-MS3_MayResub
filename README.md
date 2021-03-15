@@ -116,6 +116,7 @@ Wireframe and user flowchart can be found in the documentation folder.
 > resolved by editing the /login function with correct indentation.
 
 ## 5. Additional Comments.
+The commits are somewhat inconsistent, the later ones will use the description to specify the changes in the files. 
 
 ## 6. Testing.
 
