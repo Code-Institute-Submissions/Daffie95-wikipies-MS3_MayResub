@@ -99,11 +99,11 @@ def logout():
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
-    recipes = list(mongo.db.recipes.find())
+    recipe = list(mongo.db.recipes.find())
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
     if session["user"]:
-        return render_template("profile_page.html", username=username, recipes=recipes)
+        return render_template("profile_page.html", username=username, recipe=recipe)
 
 @app.route("/upload_recipe", methods=["GET", "POST"])
 def upload_recipe():
