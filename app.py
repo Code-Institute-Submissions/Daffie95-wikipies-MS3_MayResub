@@ -39,21 +39,21 @@ def register():
         user_exists = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
-    if user_exists:
-        flash("Username already exists")
-        return redirect(url_for("register"))
-    # retrieve information from registration form
-    register = {
-        "firstname": request.form.get("firstname").lower(),
-        "lastname": request.form.get("lastname").lower(),
-        "username": request.form.get("username").lower(),
-        "password": request.form.get("password").lower()
-    }
-    mongo.db.users.insert_one(register)
+        if user_exists:
+            flash("Username already exists")
+            return redirect(url_for("register"))
+        # retrieve information from registration form
+        register = {
+            "firstname": request.form.get("firstname").lower(),
+            "lastname": request.form.get("lastname").lower(),
+            "username": request.form.get("username").lower(),
+            "password": request.form.get("password").lower()
+        }
+        mongo.db.users.insert_one(register)
 
-    session["user"] = request.form.get("username").lower()
-    flash("Registration Successful!")
-    return render_template('register_page.html')
+        session["user"] = request.form.get("username").lower()
+        flash("Registration Successful!")
+        return render_template('register_page.html')
 # future return statement for profile page
 # return redirect(url_for("profile", username=session["user"]))
 
