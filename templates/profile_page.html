@@ -14,7 +14,6 @@
 <!-- collapsible to store recipes -->
         {% if session.user|capitalize == recipes.created_by %}
             <ul class="collapsible popout">
-                
                     {% for recipe in recipes %}
                         <li>
                             <div class="collapsible-header white-text teal lighten-2 col s12">
