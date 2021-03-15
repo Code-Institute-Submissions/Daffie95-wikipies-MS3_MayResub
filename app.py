@@ -58,6 +58,15 @@ def register():
 # return redirect(url_for("profile", username=session["user"]))
 
 
+@app.route("login", methods=["GET", "POST"])
+def login():
+    if request.method == "POST":
+        user_exists = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+        
+        
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
