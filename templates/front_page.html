@@ -3,6 +3,8 @@
 
     <h3 class="teal-text darken-2 center-align">All Recipes</h3>
 
+
+    {% if recipes|length > 0 %}
     <!-- collapsible to store recipes -->
     <ul class="collapsible">
         {% for recipe in recipes %}
@@ -19,12 +21,13 @@
                     <strong>This is a {{ recipe.category }} recipe</strong>
                     <p>{{ recipe.recipe_desc }}</p>
                     <strong>ingredients needed:</strong>
-                    <p>{{ recipe.ingredients|replace(",", " ") }}</p>
+                    <p>{{ recipe.ingredients }}</p>
                 </div>
             </li>
         {% endfor %}
     </ul>
-
+    {% else %}
+        <h4 class="red-text text-lighten-1 center align">No Recipes Found</h4>
 
     
 
