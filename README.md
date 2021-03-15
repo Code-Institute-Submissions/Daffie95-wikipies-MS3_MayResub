@@ -62,6 +62,7 @@ Wireframe and user flowchart can be found in the documentation folder.
 > > 
 
 ## 3. Planned Updates.
+> Create brand-logo
 > Revamp how recipes display on frontpage<br>
 > ~~Implement Search Function~~<br>
 > Move flash messages to modal<br>
