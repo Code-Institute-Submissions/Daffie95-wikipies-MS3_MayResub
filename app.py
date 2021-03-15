@@ -21,7 +21,7 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/frontpage")
 def frontpage():
-    recipes = list(mongo.db.recipes.find()) 
+    recipes = list(mongo.db.recipes.find())
     return render_template('front_page.html', recipes=recipes)
 
 
@@ -34,7 +34,29 @@ def search():
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
-    return render_template('register_page.html')
+    if request.method == "POST":
+        # looking in database for same username
+        user_exists = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+
+    if user_exists:
+        flash("Username already exists")
+        return redirect(url_for("register"))
+    # retrieve information from registration form
+    register = {
+        "firstname": request.form.get("firstname").lower(),
+        "lastname": request.form.get("lastname").lower(),
+        "username": request.form.get("username").lower(),
+        "password": request.form.get("password").lower()
+    }
+    mongo.db.users.insert_one(register)
+
+    session["user"] = request.form.get("username").lower()
+    flash("Registration Successful!")
+    # future return statement for profile page
+    # return redirect(url_for("profile", username=session["user"]))
+
+return render_template('register_page.html')
 
 
 if __name__ == "__main__":
