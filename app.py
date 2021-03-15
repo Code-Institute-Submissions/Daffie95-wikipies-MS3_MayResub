@@ -151,7 +151,7 @@ def upload_recipe():
     return render_template('upload_page.html')
 
 
-@app.route("/edit_recipe/<task_id>", methods=["GET", "POST"])
+@app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
     if request.method == "POST":
     # function to make the switch toggle on/off values in the dictionary "recipe"
