@@ -21,6 +21,7 @@ Wireframe and user flowchart can be found in the documentation folder.
 
 ## 2. Updates Timeline.
 > 0.2 **2021-03-15**
+> > finished registration page layout<br>
 > > Updated index to be able to search categories<br>
 > > Added routing for register page<br>
 > > Added register page<br>
