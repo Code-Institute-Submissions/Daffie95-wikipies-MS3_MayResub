@@ -107,16 +107,24 @@ def profile(username):
 @app.route("/upload_recipe", methods=["GET", "POST"])
 def upload_recipe():
     if request.method == "POST":
+        gluten = "on" if request.form.get("gluten") else "off"
+        lactose = "on" if request.form.get("gluten") else "off"
+        nuts = "on" if request.form.get("gluten") else "off"
+        peanuts = "on" if request.form.get("gluten") else "off"
+        shellfish = "on" if request.form.get("gluten") else "off"
+        fish = "on" if request.form.get("gluten") else "off"
+
         recipe = {
             "recipe_name": request.form.get("recipe_name"),
             "category": request.form.get("category"),
-            "gluten": request.form.get("gluten"),
-            "lactose": request.form.get("lactose"),
-            "nuts": request.form.get("nuts"),
-            "peanuts": request.form.get("peanuts"),
-            "shellfish": request.form.get("shellfish"),
-            "fish": request.form.get("fish"),
+            "gluten": gluten,
+            "lactose": lactose,
+            "nuts": nuts,
+            "peanuts": peanuts,
+            "shellfish": shellfish,
+            "fish": fish,
             "ingredients": request.form.get("ingredients"),
+            "steps": request.form.get("steps"),
             "recipe_desc": request.form.get("recipe_desc"),
             "recipe_steps": request.form.get("recipe_steps"),
             "created_by": session["user"]
