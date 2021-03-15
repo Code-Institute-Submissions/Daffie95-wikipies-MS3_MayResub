@@ -102,7 +102,7 @@ def profile(username):
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
     if session["user"]:
-        return render_template("front_page.html", "profile_page.html" username=username)
+        return render_template("front_page.html", "profile_page.html", username=username)
 
 @app.route("/upload_recipe", methods=["GET", "POST"])
 def upload_recipe():
