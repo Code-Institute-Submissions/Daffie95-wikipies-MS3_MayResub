@@ -13,7 +13,7 @@
     {% if session.user == recipes.created_by %}
     <!-- collapsible to store recipes -->
         <ul class="collapsible popout">
-            {% for recipes in recipe %}
+            {% for recipe in recipes %}
                 <li>
                     <div class="collapsible-header white-text teal lighten-2 col s12">
                         <div class="col s3">
