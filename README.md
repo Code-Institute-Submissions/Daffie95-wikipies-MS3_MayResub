@@ -21,6 +21,9 @@ Wireframe and user flowchart can be found in the documentation folder.
 
 ## 2. Updates Timeline.
 > 0.2 **2021-03-15**
+> > Finished registration page<br>
+> > Registration function works and uses Werkzeug password hashing<br>
+> > Built the function for new registrated users to be stored in the database<br>
 > > finished registration page layout<br>
 > > Updated index to be able to search categories<br>
 > > Added routing for register page<br>
@@ -56,6 +59,7 @@ Wireframe and user flowchart can be found in the documentation folder.
 > Implement Creating of Recipes<br>
 > Implement Updating Recipes<br>
 > Implement Deleting Recipes<br>
+> ~~Implement Functional Registration~~<br>
 > Update Project Planning<br>
 > style buttons to all look the same
 > style app with CSS
