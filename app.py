@@ -76,15 +76,15 @@ def login():
                     request.form.get("username")))
                 return redirect(url_for(
                     "profile", username=session["user"]))
+            else:
+                # flash to show user credentials was incorrect
+                flash("Password and/or Username is Incorrect")
+                return redirect(url_for("login"))
+
         else:
             # flash to show user credentials was incorrect
             flash("Password and/or Username is Incorrect")
             return redirect(url_for("login"))
-
-    else:
-        # flash to show user credentials was incorrect
-        flash("Password and/or Username is Incorrect")
-        return redirect(url_for("login"))
 
     return render_template(url_for("login_page.html"))
 
