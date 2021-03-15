@@ -104,6 +104,15 @@ def profile(username):
     if session["user"]:
         return render_template("profile_page.html", username=username)
 
+@app.route("/upload_recipe", methods=["GET", "POST"])
+def upload_recipe:
+    if request.method == "POST":
+        recipe = {
+            "recipe_name": request.form.get("recipe_name"),
+            "gategory": request.form.get("category"),
+
+        }
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
