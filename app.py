@@ -110,9 +110,18 @@ def upload_recipe:
         recipe = {
             "recipe_name": request.form.get("recipe_name"),
             "category": request.form.get("category"),
-
-
+            "gluten": request.form.get("gluten"),
+            "lactose": request.form.get("lactose"),
+            "nuts": request.form.get("nuts"),
+            "peanuts": request.form.get("peanuts"),
+            "shellfish": request.form.get("shellfish"),
+            "fish": request.form.get("fish"),
+            "recipe_desc": request.form.get("recipe_desc"),
+            "created_by": session["user"]
         }
+        mongo.db.recipes.insert_one(recipe)
+        flash("Recipe has been added!")
+        return redirect(url_for("frontpage"))
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
