@@ -28,10 +28,12 @@
                 <ul class="right hide-on-med-and-down">
                     <li><a href="#">Test1</a></li>
                     <li><a href="#">Test2</a></li>
-                    <li><a href="{{ url_for('logout') }}">Log Out</a></li>
-                    <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
+                    <li><a href="#">Test3</a></li>
+                    <li><a href="#">Test4</a></li>
                     <li><a href="{{ url_for('register') }}">Register</a></li>
                     <li><a href="{{ url_for('login') }}">Log In</a></li>
+                    <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+                    <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                 </ul>
             </div>
         </nav>
@@ -42,10 +44,12 @@
         <ul class="sidenav" id="mobile-demo">
             <li><a href="#">Test1</a></li>
             <li><a href="#">Test2</a></li>
-            <li><a href="{{ url_for('logout') }}">Log Out</a></li>
-            <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
+            <li><a href="#">Test3</a></li>
+            <li><a href="#">Test4</a></li>
             <li><a href="{{ url_for('register') }}">Register</a></li>
             <li><a href="{{ url_for('login') }}">Log In</a></li>
+            <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+            <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
         </ul>
     </header>
 
@@ -53,13 +57,13 @@
     <!-- section for all flash messages -->
     <section>
         {% with messages = get_flashed_messages() %}
-            {% if messages %}
-                {% for message in messages %}
-                    <div class="row flashes">
-                        <h5 class="teal lighten-2 center align">{{ message }}</h5>
-                    </div>
-                {% endfor %}
-            {% endif %}
+        {% if messages %}
+        {% for message in messages %}
+        <div class="row flashes">
+            <h5 class="teal lighten-2 center align">{{ message }}</h5>
+        </div>
+        {% endfor %}
+        {% endif %}
         {% endwith %}
     </section>
 
