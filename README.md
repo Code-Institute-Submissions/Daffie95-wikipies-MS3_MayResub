@@ -117,6 +117,7 @@ Wireframe and user flowchart can be found in the documentation folder.
 
 ## 5. Additional Comments.
 The commits are somewhat inconsistent, the later ones will use the description to specify the changes in the files. 
+I am using GitHub Desktop and it was simply more effective for me to write in the description.
 
 ## 6. Testing.
 
