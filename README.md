@@ -21,8 +21,8 @@ Wireframe and user flowchart can be found in the documentation folder.
 
 ## 2. Updates Timeline.
 > 0.2 **2021-03-15**
-> > Created submit button for upload recipe
-> > tested allergens toggle and viewed output
+> > Created submit button for upload recipe<br>
+> > tested allergens toggle and viewed output<br>
 > > Created dictionary to retrieve info from the input fields on upload_page.html<br>
 > > Created variables for allergens to utilize toggles (easier to display on the recipes using ***if toggle on*** statement to display icon)<br>
 > > Created routing for upload_page and function to use .insertOne into the<br> database using the input values from the page.<br>
@@ -41,7 +41,7 @@ Wireframe and user flowchart can be found in the documentation folder.
 > > search function works, filtering the index<br>
 > > Created recipe index in MongoDB to use in the search functionality<br>
 > > Added search route<br>
-> > Added search element<br>
+> > Added search elements<br>
 > > Added comments for base.html<br>
 > > Added comments for JQuerys in scripts.js<br>
 > > Added ellergens icons with tooltip<br>
