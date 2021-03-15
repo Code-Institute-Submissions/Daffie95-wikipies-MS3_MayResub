@@ -53,7 +53,11 @@
                         <!-- add icon to match display on frontpage -->
                         <!-- allergens -->
                         <label for="gluten">
+                        {% if recipe.gluten == "on" %}
+                            <input type="checkbox" id="gluten" name="gluten" value="{{ recipe.gluten }}" checked>
+                        {% else %}
                             <input type="checkbox" id="gluten" name="gluten" value="{{ recipe.gluten }}">
+                        {% endif %}
                             <span class="lever"></span>
                             Gluten
                         </label>
