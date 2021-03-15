@@ -46,6 +46,7 @@ Wireframe and user flowchart can be found in the documentation folder.
 > Implement Creating of Recipes<br>
 > Implement Updating Recipes<br>
 > Implement Deleting Recipes<br>
+> Update Project Planning<br>
 
 ## 4. Bugs & Errors.
 1. 2021-03-14
