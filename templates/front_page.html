@@ -27,7 +27,7 @@
                     <a href="#" class="btn-small waves-effect waves-light green">Edit</a>
                 </div>
                 <div class="col s9">
-                    <strong>{{ recipe.recipe_name }}</strong> Written by: {{ recipe.created_by }}
+                    <strong>{{ recipe.recipe_name|capitalize }}</strong> Written by: {{ recipe.created_by }}
                     {% if recipe.gluten == "yes" %}
                         <i class="material-icons white-text tooltipped" data-position="right"
                             data-tooltip="Contains Gluten">looks_one</i>
@@ -41,7 +41,7 @@
                 </div>
             </div>
             <div class="collapsible-body">
-                <strong>This is a {{ recipe.category }} recipe</strong>
+                <strong>This is a {{ recipe.category|capitalize }} recipe</strong>
                 <h6>Steps:</h6>
                 <p>{{ recipe.recipe_desc }}</p>
                 <strong>ingredients needed:</strong>
