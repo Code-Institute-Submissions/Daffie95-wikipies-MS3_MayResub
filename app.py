@@ -123,7 +123,7 @@ def profile(username):
 @app.route("/upload_recipe", methods=["GET", "POST"])
 def upload_recipe():
     if request.method == "POST":
-        # function to make the switch toggle on/off in the dictionary "recipe"
+        # function to make the switch toggle on/off values in the dictionary "recipe"
         gluten = "on" if request.form.get("gluten") else "off"
         lactose = "on" if request.form.get("lactose") else "off"
         nuts = "on" if request.form.get("nuts") else "off"
