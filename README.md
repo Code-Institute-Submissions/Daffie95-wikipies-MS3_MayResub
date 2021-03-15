@@ -21,6 +21,8 @@ Wireframe and user flowchart can be found in the documentation folder.
 
 ## 2. Updates Timeline.
 > 0.2 **2021-03-15**
+> > Created routing for upload_page and function to use .insertOne into the<br> database using the input values from the page.
+> > Created placeholder input field on upload_recipe for testing.
 > > Created routing for login with functions to read hashed password and put user in session<br>
 > > Starting development of login page/route<br>
 > > Finished registration page<br>
@@ -58,14 +60,16 @@ Wireframe and user flowchart can be found in the documentation folder.
 ## 3. Planned Updates.
 > ~~Implement Search Function~~<br>
 > Implement User auth<br>
-> Add more allergen icons<br>
+> Add more Allergen icons<br>
+> Implement Allergen functions in update/edit recipe to be toggles<br>
 > Implement Creating of Recipes<br>
 > Implement Updating Recipes<br>
 > Implement Deleting Recipes<br>
 > ~~Implement Functional Registration~~<br>
 > Update Project Planning<br>
 > style buttons to all look the same
-> style app with CSS
+> Style nav
+> Style text content
 
 ## 4. Bugs & Errors.
 
