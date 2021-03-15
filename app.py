@@ -108,11 +108,11 @@ def profile(username):
 def upload_recipe():
     if request.method == "POST":
         gluten = "on" if request.form.get("gluten") else "off"
-        lactose = "on" if request.form.get("gluten") else "off"
-        nuts = "on" if request.form.get("gluten") else "off"
-        peanuts = "on" if request.form.get("gluten") else "off"
-        shellfish = "on" if request.form.get("gluten") else "off"
-        fish = "on" if request.form.get("gluten") else "off"
+        lactose = "on" if request.form.get("lactose") else "off"
+        nuts = "on" if request.form.get("nuts") else "off"
+        peanuts = "on" if request.form.get("peanuts") else "off"
+        shellfish = "on" if request.form.get("shellfish") else "off"
+        fish = "on" if request.form.get("fish") else "off"
 
         recipe = {
             "recipe_name": request.form.get("recipe_name"),
