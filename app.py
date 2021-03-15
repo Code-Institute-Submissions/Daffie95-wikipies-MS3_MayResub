@@ -63,10 +63,12 @@ def register():
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
+        # check stored usernames for match with user input
         user_exists = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
         if user_exists:
+            # check hashed password to match it with user input
             if check_password_hash(
                     user_exists["password"], request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
