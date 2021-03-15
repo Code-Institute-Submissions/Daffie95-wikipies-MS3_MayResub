@@ -94,7 +94,7 @@ def logout():
     #removes/logs out user from session
     flash("You have logged out")
     session.pop("user")
-    redirect(url_for("login"))
+    return redirect(url_for("login"))
 
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
