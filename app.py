@@ -25,6 +25,13 @@ def frontpage():
     return render_template('front_page.html', recipes=recipes)
 
 
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    search = request.form.get("search")
+    recipes = list(mongo.db.recipes.find({"$text": {"$search": search}}))
+    return render_template("front_page.html", recipes=recipes)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
