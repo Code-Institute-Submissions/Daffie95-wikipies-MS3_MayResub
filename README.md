@@ -52,6 +52,17 @@ Wireframe and user flowchart can be found in the documentation folder.
 > Update Project Planning<br>
 
 ## 4. Bugs & Errors.
+2. 2021-03-15
+> **Expected Result:**
+> > using the correct column size would display the search elements and the collapsible element as the same width
+
+> **Actual Result:**
+> > the search and collapsible elements does not align
+
+> **Resolved Y/N:**
+> > N
+
+
 1. 2021-03-14
 > **Expected Result:**
 > > Applying a Jinja for loop in front_page.html would render on screen in the preview.
