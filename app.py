@@ -32,6 +32,10 @@ def search():
     return render_template("front_page.html", recipes=recipes)
 
 
+@app.route("/register", methods=["GET", "POST"])
+def register():
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
