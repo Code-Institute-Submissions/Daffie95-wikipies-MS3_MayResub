@@ -10,7 +10,6 @@
             </div>
         </div>
     </div>
-    {% if recipes|length > 0 %}
             {% for recipe in recipes if session.user == recipes.created_by %}
                 <ul class="collapsible popout">
                     <li>
@@ -57,7 +56,4 @@
                 </ul>
             {% endfor %}
         {% endif %}
-    {% else %}
-        <h4 class="red-text text-lighten-1 center align">No Recipes Found</h4>
-    {% endif %}
 {% endblock %}
