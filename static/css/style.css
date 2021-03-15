@@ -10,11 +10,11 @@
     margin: 10px;
 }
 
-.collapsible-header .col strong{
+.collapsible-header .col .strong{
     margin: 3px;
     line-height: 40px;
 }
 
-.li p {
+.li .p {
     font-family: Catamaran;
 }
