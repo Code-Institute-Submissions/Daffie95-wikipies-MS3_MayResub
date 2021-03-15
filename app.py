@@ -34,6 +34,7 @@ def search():
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
+    return render_template('register_page.html')
 
 
 if __name__ == "__main__":
