@@ -15,6 +15,15 @@
                     </div>
                     <div class="col s9">
                         <strong>{{ recipe.recipe_name }}</strong>  Written by: {{ recipe.created_by }}
+                        {% if recipe.gluten == "yes" %}
+                            <i class="material-icons white-text tooltipped" data-position="right" data-tooltip="Contains Gluten">looks_one</i>
+                            {% elif recipe.lactose == "yes" %}
+                                <i class="material-icons white-text tooltipped" data-position="right" data-tooltip="Contains Lactose">looks_two</i>¨
+                                {% elif recipe.nuts == "yes" %}
+                                    <i class="material-icons white-text tooltipped" data-position="right" data-tooltip="Contains Nuts">looks_three</i>¨
+                                {% endif %}
+                            {% endif %}
+                        {% endif %}
                     </div>
                 </div>
                 <div class="collapsible-body">
