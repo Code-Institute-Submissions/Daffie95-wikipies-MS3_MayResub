@@ -26,14 +26,14 @@
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i
                         class="material-icons white-text">menu</i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="#">Test1</a></li>
-                    <li><a href="#">Test2</a></li>
-                    <li><a href="#">Test3</a></li>
-                    <li><a href="#">Test4</a></li>
                     <li><a href="{{ url_for('register') }}">Register</a></li>
                     <li><a href="{{ url_for('login') }}">Log In</a></li>
                     <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                     <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
+                    <li><a href="#">Test1</a></li>
+                    <li><a href="#">Test2</a></li>
+                    <li><a href="#">Test3</a></li>
+                    <li><a href="#">Test4</a></li>
                 </ul>
             </div>
         </nav>
@@ -42,14 +42,14 @@
 
         <!-- smallscreen/mobile nav -->
         <ul class="sidenav" id="mobile-demo">
-            <li><a href="#">Test1</a></li>
-            <li><a href="#">Test2</a></li>
-            <li><a href="#">Test3</a></li>
-            <li><a href="#">Test4</a></li>
             <li><a href="{{ url_for('register') }}">Register</a></li>
             <li><a href="{{ url_for('login') }}">Log In</a></li>
             <li><a href="{{ url_for('logout') }}">Log Out</a></li>
             <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
+            <li><a href="#">Test1</a></li>
+            <li><a href="#">Test2</a></li>
+            <li><a href="#">Test3</a></li>
+            <li><a href="#">Test4</a></li>
         </ul>
     </header>
 
