@@ -10,6 +10,7 @@
         </div>
     </div>
 </div>
+<!-- need to filter this so that the user only sees recipes created by the user -->
 {% for recipe in recipes if session.username == recipes.created_by %}
 <ul class="collapsible popout">
     <li>
