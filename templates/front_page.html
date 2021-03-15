@@ -2,11 +2,6 @@
 {% block content %}
 
 <h3 class="teal-text darken-2 center-align">All Recipes</h3>
-<h4 class="teal-text darken-2 center align">Look for <i class="material-icons white-text tooltipped"
-        data-position="right" data-tooltip="Contains Gluten">looks_one</i><i
-        class="material-icons white-text tooltipped" data-position="right"
-        data-tooltip="Contains Lactose">looks_two</i><i class="material-icons white-text tooltipped"
-        data-position="right" data-tooltip="Contains Nuts">looks_three</i> for allergens</h4>
 
 
 {% if recipes|length > 0 %}
@@ -16,10 +11,12 @@
     <li>
         <div class="collapsible-header white-text teal lighten-2">
             <div class="col s3">
+                <!-- button for future edit use -->
                 <a href="#" class="btn-small waves-effect waves-light green">Edit</a>
             </div>
             <div class="col s9">
                 <strong>{{ recipe.recipe_name|capitalize }}</strong> Written by: {{ recipe.created_by }}
+                <!-- Jinja statement to conditionally check for allergens -->
                 {% if recipe.gluten == "yes" %}
                 <i class="material-icons white-text tooltipped" data-position="right"
                     data-tooltip="Contains Gluten">looks_one</i>
@@ -32,6 +29,7 @@
                 {% endif %}
             </div>
         </div>
+        <!-- collapsible body returns category, description, and ingredients -->
         <div class="collapsible-body">
             <strong>This is a {{ recipe.category|capitalize }} recipe</strong>
             <h6>Steps:</h6>
@@ -42,6 +40,7 @@
     </li>
     {% endfor %}
 </ul>
+<!-- else function for when searching is implemented and no searches were found -->
 {% else %}
 <h4 class="red-text text-lighten-1 center align">No Recipes Found</h4>
 {% endif %}

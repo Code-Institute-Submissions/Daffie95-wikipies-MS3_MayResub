@@ -20,6 +20,13 @@ Wireframe and user flowchart can be found in the documentation folder.
 
 
 ## 2. Updates Timeline.
+> 0.2 **2021-03-15**
+> > Added comments for base.html<br>
+> > Added comments for JQuerys in scripts.js<br>
+> > Added ellergens icons with tooltip<br>
+> > Formatted Jinja output for recipes.<br>
+
+
 > 0.1 **2021-03-14**
 > > Created app on heroku and configured Config Vars<br>
 > > Added User Flowchart <br>
