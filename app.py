@@ -53,9 +53,10 @@ def register():
 
     session["user"] = request.form.get("username").lower()
     flash("Registration Successful!")
-    # future return statement for profile page
-    # return redirect(url_for("profile", username=session["user"]))
+    
 return render_template('register_page.html')
+# future return statement for profile page
+    # return redirect(url_for("profile", username=session["user"]))
 
 
 if __name__ == "__main__":
