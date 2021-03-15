@@ -36,16 +36,16 @@
                 <strong>{{ recipe.recipe_name|capitalize }}</strong> Written by: {{ recipe.created_by|capitalize }}
                 <!-- Jinja statements to conditionally check for allergens -->
                 {% if recipe.gluten == "on" %}
-                    <i class="material-icons white-text tooltipped" data-position="right"
+                    <i class="material-icons white-text tooltipped" data-position="top"
                     data-tooltip="Contains Gluten">looks_one</i>
                     {% if recipe.lactose == "on" %}
                         <i class="material-icons white-text tooltipped" data-position="right"
                         data-tooltip="Contains Lactose">looks_two</i>
                         {% if recipe.nuts == "on" %}
-                            <i class="material-icons white-text tooltipped" data-position="right"
+                            <i class="material-icons white-text tooltipped" data-position="left"
                             data-tooltip="Contains Nuts">looks_3</i>
                             {% if recipe.peanuts == "on" %}
-                                <i class="material-icons white-text tooltipped" data-position="right"
+                                <i class="material-icons white-text tooltipped" data-position="bottom"
                                 data-tooltip="Contains Peanuts">looks_4</i>
                                 {% if recipe.shellfish == "on" %}
                                     <i class="material-icons white-text tooltipped" data-position="right"
