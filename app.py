@@ -133,19 +133,19 @@ def upload_recipe():
         # the dictionary pulls content from the input fields on upload_page.html
         # and inserts it into the database
         recipe = {
-            "recipe_name": request.form.get("recipe_name").lower(),
-            "category": request.form.get("category").lower(),
+            "recipe_name": request.form.get("recipe_name"),
+            "category": request.form.get("category"),
             "gluten": gluten,
             "lactose": lactose,
             "nuts": nuts,
             "peanuts": peanuts,
             "shellfish": shellfish,
             "fish": fish,
-            "ingredients": request.form.get("ingredients").lower(),
-            "steps": request.form.get("steps").lower(),
-            "recipe_desc": request.form.get("recipe_desc").lower(),
-            "recipe_steps": request.form.get("recipe_steps").lower(),
-            "created_by": session["user"].lower()
+            "ingredients": request.form.get("ingredients"),
+            "steps": request.form.get("steps"),
+            "recipe_desc": request.form.get("recipe_desc"),
+            "recipe_steps": request.form.get("recipe_steps"),
+            "created_by": session["user"]
         }
         # inserts the dictionary "recipe" in the database
         mongo.db.recipes.insert_one(recipe)
