@@ -34,10 +34,30 @@
             </div>
             <div class="col s9">
                 <strong>{{ recipe.recipe_name|capitalize }}</strong> Written by: {{ recipe.created_by|capitalize }}
-                <!-- Jinja statement to conditionally check for allergens -->
-                {% if recipe.gluten == "yes" %}
+                <!-- Jinja statements to conditionally check for allergens -->
+                {% if recipe.gluten == "on" %}
                     <i class="material-icons white-text tooltipped" data-position="right"
                     data-tooltip="Contains Gluten">looks_one</i>
+                    {% if recipe.lactose == "on" %}
+                        <i class="material-icons white-text tooltipped" data-position="right"
+                        data-tooltip="Contains Lactose">looks_two</i>
+                        {% if recipe.nuts == "on" %}
+                            <i class="material-icons white-text tooltipped" data-position="right"
+                            data-tooltip="Contains Nuts">looks_3</i>
+                            {% if recipe.peanuts == "on" %}
+                                <i class="material-icons white-text tooltipped" data-position="right"
+                                data-tooltip="Contains Peanuts">looks_4</i>
+                                {% if recipe.shellfish == "on" %}
+                                    <i class="material-icons white-text tooltipped" data-position="right"
+                                    data-tooltip="Contains Shellfish">looks_5</i>
+                                    {% if recipe.fish == "on" %}
+                                        <i class="material-icons white-text tooltipped" data-position="right"
+                                        data-tooltip="Contains Fish">looks_6</i>
+                                    {% endif %}
+                                {% endif %}
+                            {% endif %}
+                        {% endif %}
+                    {% endif %}
                 {% endif %}
             </div>
         </div>
