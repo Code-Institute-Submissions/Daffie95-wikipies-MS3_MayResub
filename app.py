@@ -116,7 +116,9 @@ def upload_recipe():
             "peanuts": request.form.get("peanuts"),
             "shellfish": request.form.get("shellfish"),
             "fish": request.form.get("fish"),
+            "ingredients": request.form.get("ingredients"),
             "recipe_desc": request.form.get("recipe_desc"),
+            "recipe_steps": request.form.get("recipe_steps"),
             "created_by": session["user"]
         }
         mongo.db.recipes.insert_one(recipe)
