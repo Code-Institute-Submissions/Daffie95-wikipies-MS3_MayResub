@@ -55,7 +55,6 @@ def register():
     flash("Registration Successful!")
     # future return statement for profile page
     # return redirect(url_for("profile", username=session["user"]))
-
 return render_template('register_page.html')
 
 
