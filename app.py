@@ -63,11 +63,18 @@ def login():
     if request.method == "POST":
         user_exists = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
-        
-        
+
+        if user_exists:
+            if check_password_hash(
+                user_exists["password"], request.form.get("password")):
+                session["user"] = request.form.get("username").lower()
+                flash("Hi, Welcome {}".format(
+                    request.form.get("username")))
+                return redirect(url_for(
+                    "profile", username=session["user"])))
 
 
 if __name__ == "__main__":
-    app.run(host=os.environ.get("IP"),
-            port=int(os.environ.get("PORT")),
-            debug=True)
+    app.run(host = os.environ.get("IP"),
+            port = int(os.environ.get("PORT")),
+            debug = True)
