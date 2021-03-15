@@ -1,0 +1,129 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+    <h3 class="teal lighten-2 center align">Edit Recipe</h3>
+
+
+    <div class="row card-panel teal lighten-2">
+        <form action="{{ url_for('edit_page') }}" method="POST" class="col s12">
+            <div class="row">
+                <div class="input-field col s12">
+                    <!-- recipe name -->
+                    <input id="recipe_name" name="recipe_name" minlength="5" maxlength="50" type="text" class="validate"
+                        value="{{ recipe.recipe_name }}" required>
+                    <label for="recipe_name">Recipe Name</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <!-- category -->
+                    <input id="category" name="category" minlength="5" maxlength="20" type="text" class="validate" required
+                    value="{{ recipe.category }}">
+                    <label for="category">Category</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <!-- recipe description -->
+                    <input id="recipe_desc" name="recipe_desc" minlength="5" maxlength="200" type="text" class="validate"
+                        required value="{{ recipe.recipe_desc }}">
+                    <label for="recipe_desc">Description</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <!-- recipe ingredients -->
+                    <input id="ingredients" name="ingredients" minlength="5" maxlength="200" type="text" class="validate"
+                        required value="{{ recipe.ingredients }}">
+                    <label for="ingredients">Ingredients</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <!-- steps -->
+                    <input id="steps" name="steps" minlength="5" maxlength="300" type="text" class="validate" required
+                    value="{{ recipe.steps }}">
+                    <label for="steps">Steps</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <div class="switch">
+                        <!-- add icon to match display on frontpage -->
+                        <!-- allergens -->
+                        <label for="gluten">
+                            <input type="checkbox" id="gluten" name="gluten">
+                            <span class="lever"></span>
+                            Gluten
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <div class="switch">
+                        <label for="lactose">
+                            <input type="checkbox" id="lactose" name="lactose">
+                            <span class="lever"></span>
+                            Lactose
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <div class="switch">
+                        <label for="nuts">
+                            <input type="checkbox" id="nuts" name="nuts">
+                            <span class="lever"></span>
+                            Nuts
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <div class="switch">
+                        <label for="peanuts">
+                            <input type="checkbox" id="peanuts" name="peanuts">
+                            <span class="lever"></span>
+                            Peanuts
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <div class="switch">
+                        <label for="shellfish">
+                            <input type="checkbox" id="shellfish" name="shellfish">
+                            <span class="lever"></span>
+                            Shellfish
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <div class="switch">
+                        <label for="fish">
+                            <input type="checkbox" id="fish" name="fish">
+                            <span class="lever"></span>
+                            Fish
+                        </label>
+                    </div>
+                </div>
+            </div><!-- submit recipe button -->
+            <div class="row">
+                <div class="col s12 center-align">
+                    <button type="submit" class="btn-large teal lighten-4">
+                        Add Recipe
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+    </form>
+    </div>
+{% endblock %}
