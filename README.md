@@ -64,6 +64,7 @@ Wireframe and user flowchart can be found in the documentation folder.
 > > 
 
 ## 3. Planned Updates.
+> Create If statement on edit page to render if the allergens toggle was on or off before editing
 > Create function to display users recipes on profile page<br>
 > Revamp how recipes display on frontpage<br>
 > ~~Implement Search Function~~<br>
