@@ -65,7 +65,6 @@ Wireframe and user flowchart can be found in the documentation folder.
 
 ## 3. Planned Updates.
 > Create function to display users recipes on profile page<br>
-> Create brand-logo
 > Revamp how recipes display on frontpage<br>
 > ~~Implement Search Function~~<br>
 > Move flash messages to modal<br>
@@ -77,9 +76,10 @@ Wireframe and user flowchart can be found in the documentation folder.
 > Implement Deleting Recipes<br>
 > ~~Implement Functional Registration~~<br>
 > Update Project Planning<br>
-> style buttons to all look the same
-> Style nav
-> Style text content
+> style buttons to all look the same<br>
+> Style nav<br>
+> Style text content<br>
+> Style brand logo<br>
 
 ## 4. Bugs & Errors.
 
