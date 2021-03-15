@@ -10,7 +10,7 @@
         </div>
     </div>
 </div>
-{% for recipe in recipes if session.user == recipes.created_by %}
+{% for recipe in recipes if session.username == recipes.created_by %}
 <ul class="collapsible popout">
     <li>
         <div class="collapsible-header white-text teal lighten-2 col s12">
@@ -21,28 +21,28 @@
                 <strong>{{ recipe.recipe_name|capitalize }}</strong> Written by: {{ recipe.created_by|capitalize }}
                 {% if recipe.gluten == "on" %}
                 <i class="material-icons white-text tooltipped" data-position="top"
-                    data-tooltip="Contains Gluten">looks_one</i>
+                data-tooltip="Contains Gluten">looks_one</i>
                 {% if recipe.lactose == "on" %}
-                <i class="material-icons white-text tooltipped" data-position="top"
+                    <i class="material-icons white-text tooltipped" data-position="top"
                     data-tooltip="Contains Lactose">looks_two</i>
-                {% if recipe.nuts == "on" %}
-                <i class="material-icons white-text tooltipped" data-position="top"
-                    data-tooltip="Contains Nuts">looks_3</i>
-                {% if recipe.peanuts == "on" %}
-                <i class="material-icons white-text tooltipped" data-position="top"
-                    data-tooltip="Contains Peanuts">looks_4</i>
-                {% if recipe.shellfish == "on" %}
-                <i class="material-icons white-text tooltipped" data-position="top"
-                    data-tooltip="Contains Shellfish">looks_5</i>
-                {% if recipe.fish == "on" %}
-                <i class="material-icons white-text tooltipped" data-position="top"
-                    data-tooltip="Contains Fish">looks_6</i>
+                    {% if recipe.nuts == "on" %}
+                        <i class="material-icons white-text tooltipped" data-position="top"
+                        data-tooltip="Contains Nuts">looks_3</i>
+                        {% if recipe.peanuts == "on" %}
+                            <i class="material-icons white-text tooltipped" data-position="top"
+                            data-tooltip="Contains Peanuts">looks_4</i>
+                            {% if recipe.shellfish == "on" %}
+                                <i class="material-icons white-text tooltipped" data-position="top"
+                                data-tooltip="Contains Shellfish">looks_5</i>
+                                {% if recipe.fish == "on" %}
+                                    <i class="material-icons white-text tooltipped" data-position="top"
+                                    data-tooltip="Contains Fish">looks_6</i>
+                                {% endif %}
+                            {% endif %}
+                        {% endif %}
+                    {% endif %}
                 {% endif %}
-                {% endif %}
-                {% endif %}
-                {% endif %}
-                {% endif %}
-                {% endif %}
+            {% endif %}
             </div>
         </div>
         <div class="collapsible-body">
