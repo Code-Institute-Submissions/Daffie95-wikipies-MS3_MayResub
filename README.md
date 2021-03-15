@@ -21,6 +21,7 @@ Wireframe and user flowchart can be found in the documentation folder.
 
 ## 2. Updates Timeline.
 > 0.2 **2021-03-15**
+> > created recipe index in MongoDB to use in the search functionality
 > > Added search route
 > > Added search element
 > > Added comments for base.html<br>
