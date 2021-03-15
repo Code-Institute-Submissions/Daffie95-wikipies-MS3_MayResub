@@ -4,7 +4,7 @@
     <h3 class="center-align">Log in</h3>
 
     <div class="row">
-        <form class="col s12 m6 offset-m2" action="{{ url_for('login') }}" method="POST">
+        <form class="col s12 m6" action="{{ url_for('login') }}" method="POST">
             <div class="card-panel">
                 <!-- username input field -->
                 <div class="row">
@@ -22,6 +22,7 @@
                         <label for="password">Password</label>
                     </div>
                 </div>
+                <!-- login button -->
             </div>
         </form>
     </div>
@@ -35,5 +36,5 @@
             </p>
         </div>
     </div>
-    
+
 {% endblock %}
