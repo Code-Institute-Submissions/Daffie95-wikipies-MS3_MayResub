@@ -89,7 +89,7 @@ def login():
     return render_template('login_page.html')
 
 
-@app.route("/profile(<username>", methods=["GET", "POST"])
+@app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     username = mongodb.users.find_one(
         {"username": session["user"]})["username"]
