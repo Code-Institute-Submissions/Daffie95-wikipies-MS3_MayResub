@@ -10,7 +10,7 @@
             </div>
         </div>
     </div>
-    {% if username == recipes.created_by %}
+    {% if session["user"] == recipes.created_by %}
     <!-- collapsible to store recipes -->
         <ul class="collapsible popout">
             {% for recipe in recipes %}
