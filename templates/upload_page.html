@@ -7,14 +7,32 @@
         <form action="{{ url_for('upload_recipe') }}" method="POST" class="col s12">
             <div class="row">
                 <div class="input-field col s12">
+                    <!-- recipe name -->
                     <input id="recipe_name" name="recipe_name" minlength="5" maxlength="50"
                         type="text" class="validate" required>
                     <label for="recipe_name">Recipe Name</label>
                 </div>
             </div>
             <div class="row">
+                <div class="input-field col s12">
+                    <!-- category -->
+                    <input id="category" name="category" minlength="5" maxlength="20"
+                        type="text" class="validate" required placeholder="Breakfast, Lunch, or Dinner?">
+                    <label for="category">Category</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <!-- recipe description -->
+                    <input id="recipe_desc" name="recipe_desc" minlength="5" maxlength="200"
+                        type="text" class="validate" required placeholder="Describe the recipe">
+                    <label for="recipe_desc">Description</label>
+                </div>
+            </div>
+            <!-- submit recipe button -->
+            <div class="row">
                 <div class="col s12 center-align">
-                    <button type="submit" class="btn-large teal lighten-2">
+                    <button type="submit" class="btn-large teal lighten-4">
                         Add Recipe
                     </button>
                 </div>
