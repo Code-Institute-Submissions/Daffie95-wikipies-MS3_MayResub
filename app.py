@@ -151,6 +151,34 @@ def upload_recipe():
     return render_template('upload_page.html')
 
 
+@app.route("/edit_recipe/<task_id>", methods=["GET", "POST"])
+def edit_recipe(recipe_id):
+    if request.method == "POST":
+    # function to make the switch toggle on/off values in the dictionary "recipe"
+        gluten = "on" if request.form.get("gluten") else "off"
+        lactose = "on" if request.form.get("lactose") else "off"
+        nuts = "on" if request.form.get("nuts") else "off"
+        peanuts = "on" if request.form.get("peanuts") else "off"
+        shellfish = "on" if request.form.get("shellfish") else "off"
+        fish = "on" if request.form.get("fish") else "off"
+        edit = {
+            "recipe_name": request.form.get("recipe_name"),
+            "category": request.form.get("category"),
+            "gluten": gluten,
+            "lactose": lactose,
+            "nuts": nuts,
+            "peanuts": peanuts,
+            "shellfish": shellfish,
+            "fish": fish,
+            "ingredients": request.form.get("ingredients"),
+            "steps": request.form.get("steps"),
+            "recipe_desc": request.form.get("recipe_desc"),
+            "recipe_steps": request.form.get("recipe_steps"),
+            "created_by": session["user"]
+            }
+            recipe mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
+            flash("Recipe has been updated")
+    return render_template("edit_page.html" recipe=recipe)   
 
 
 
