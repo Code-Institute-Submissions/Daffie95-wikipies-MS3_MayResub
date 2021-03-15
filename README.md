@@ -21,8 +21,12 @@ Wireframe and user flowchart can be found in the documentation folder.
 
 ## 2. Updates Timeline.
 > 0.2 **2021-03-15**
-> > Created routing for upload_page and function to use .insertOne into the<br> database using the input values from the page.
-> > Created placeholder input field on upload_recipe for testing.
+> > Created submit button for upload recipe
+> > tested allergens toggle and viewed output
+> > Created dictionary to retrieve info from the input fields on upload_page.html<br>
+> > Created variables for allergens to utilize toggles (easier to display on the recipes using ***if toggle on*** statement to display icon)<br>
+> > Created routing for upload_page and function to use .insertOne into the<br> database using the input values from the page.<br>
+> > Created placeholder input field on upload_recipe for testing.<br>
 > > Created routing for login with functions to read hashed password and put user in session<br>
 > > Starting development of login page/route<br>
 > > Finished registration page<br>
@@ -58,12 +62,13 @@ Wireframe and user flowchart can be found in the documentation folder.
 > > 
 
 ## 3. Planned Updates.
+> Revamp how recipes display on frontpage<br>
 > ~~Implement Search Function~~<br>
 > Move flash messages to modal<br>
-> Implement User auth<br>
-> Add more Allergen icons<br>
+> ~~Implement User auth<br>~~
+> Add more Allergen icons (on frontpage/view all recipes using ***if x on then***<br>
 > Implement Allergen functions in update/edit recipe to be toggles<br>
-> Implement Creating of Recipes<br>
+> ~~Implement Creating of Recipes<br>~~
 > Implement Updating Recipes<br>
 > Implement Deleting Recipes<br>
 > ~~Implement Functional Registration~~<br>
