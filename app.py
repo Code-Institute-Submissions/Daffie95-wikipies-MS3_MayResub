@@ -19,8 +19,6 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 # route function to ensure that any empty routes renders the frontpage
-
-
 @app.route("/")
 # route function to render the frontpage and all current recepies
 @app.route("/frontpage")
@@ -29,8 +27,6 @@ def frontpage():
     return render_template('front_page.html', recipes=recipes)
 
 # route function to render the search function
-
-
 @app.route("/search", methods=["GET", "POST"])
 def search():
     # using indexing on the database to create a search function
@@ -39,8 +35,6 @@ def search():
     return render_template("front_page.html", recipes=recipes)
 
 # route function to render the register page
-
-
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -62,7 +56,7 @@ def register():
         # function to check wether user credentials are in the database and put user in session
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful!")
-        redirect(url_for("profile", username=session["user"]))
+        return redirect(url_for("profile", username=session["user"]))   
     return render_template('register_page.html')
 
 
@@ -96,8 +90,6 @@ def login():
     return render_template('login_page.html')
 
 # route function to log out current session user with .pop()
-
-
 @app.route("/logout")
 def logout():
     flash("You have logged out")
@@ -154,7 +146,7 @@ def upload_recipe():
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
     if request.method == "POST":
-    # function to make the switch toggle on/off values in the dictionary "recipe"
+        # function to make the switch toggle on/off values in the dictionary "recipe"
         gluten = "on" if request.form.get("gluten") else "off"
         lactose = "on" if request.form.get("lactose") else "off"
         nuts = "on" if request.form.get("nuts") else "off"
@@ -178,7 +170,7 @@ def edit_recipe(recipe_id):
         }
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
         flash("Recipe has been updated")
-    
+
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     return render_template("edit_page.html")
 
@@ -187,8 +179,7 @@ def edit_recipe(recipe_id):
 def delete_recipe(recipe_id):
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
     flash("Recipe Was Deleted")
-    return redirect(url_for("frontpage"))   
-
+    return redirect(url_for("frontpage"))
 
 
 if __name__ == "__main__":
