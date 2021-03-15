@@ -179,7 +179,7 @@ def edit_recipe(recipe_id):
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
         flash("Recipe has been updated")
     
-    recipe = mongo.db.recipes.findOne({"_id": ObjectId(recipe_id)})
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     return render_template("edit_page.html", recipe=recipe,)   
 
 
