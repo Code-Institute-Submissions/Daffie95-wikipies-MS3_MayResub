@@ -172,7 +172,7 @@ def edit_recipe(recipe_id):
         flash("Recipe has been updated")
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
-    return render_template("edit_page.html")
+    return render_template("edit_page.html", recipe=recipe)
 
 
 @app.route("/delete_recipe/<recipe_id>")
