@@ -21,9 +21,12 @@ Wireframe and user flowchart can be found in the documentation folder.
 
 ## 2. Updates Timeline.
 > 0.2 **2021-03-15**
+> > Updated index to be able to search categories<br>
 > > Added routing for register page<br>
 > > Added register page<br>
 > > Finished working on frontpage<br>
+> > reset the search function resets the current index, returning user to view all recipes<br>
+> > search function works, filtering the index<br>
 > > Created recipe index in MongoDB to use in the search functionality<br>
 > > Added search route<br>
 > > Added search element<br>
