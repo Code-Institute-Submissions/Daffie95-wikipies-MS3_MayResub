@@ -21,6 +21,8 @@ Wireframe and user flowchart can be found in the documentation folder.
 
 ## 2. Updates Timeline.
 > 0.2 **2021-03-15**
+> > Created edit page using the upload inserts
+> > Created routing for edit_page
 > > Created submit button for upload recipe<br>
 > > tested allergens toggle and viewed output<br>
 > > Created dictionary to retrieve info from the input fields on upload_page.html<br>
