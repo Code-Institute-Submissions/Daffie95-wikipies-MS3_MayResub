@@ -73,7 +73,7 @@ Wireframe and user flowchart can be found in the documentation folder.
 > ~~Implement Allergen functions in update/edit recipe to be toggles<br>~~
 > ~~Implement Creating of Recipes<br>~~
 > ~~Implement Updating Recipes<br>~~
-> Implement Deleting Recipes<br>
+> ~~Implement Deleting Recipes<br>~~
 > ~~Implement Functional Registration~~<br>
 > Update Project Planning<br>
 > style buttons to all look the same<br>
