@@ -50,12 +50,14 @@ Wireframe and user flowchart can be found in the documentation folder.
 > > 
 
 ## 3. Planned Updates.
-> Implement Search Function<br>
+> ~~Implement Search Function~~<br>
 > Implement User auth<br>
 > Implement Creating of Recipes<br>
 > Implement Updating Recipes<br>
 > Implement Deleting Recipes<br>
 > Update Project Planning<br>
+> style buttons to all look the same
+> style app with CSS
 
 ## 4. Bugs & Errors.
 2. 2021-03-15
