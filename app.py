@@ -121,7 +121,7 @@ def upload_recipe():
         }
         mongo.db.recipes.insert_one(recipe)
         flash("Recipe has been added!")
-        return redirect(url_for("frontpage"))
+    return redirect(url_for("frontpage"))
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
