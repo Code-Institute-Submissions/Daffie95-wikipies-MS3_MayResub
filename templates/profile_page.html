@@ -12,7 +12,7 @@
     </div>
     {% if recipes|length > 0 %}
 <!-- collapsible to store recipes -->
-        {% if session.user == recipes.created_by %}
+        {% if session.user|capitalize == recipes.created_by %}
             <ul class="collapsible popout">
                 
                     {% for recipe in recipes %}
