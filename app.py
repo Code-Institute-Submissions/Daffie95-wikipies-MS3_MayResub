@@ -58,6 +58,8 @@ def register():
 # return redirect(url_for("profile", username=session["user"]))
 
 # function to check wether user credentials are in the database and put user in session
+
+
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -66,24 +68,26 @@ def login():
 
         if user_exists:
             if check_password_hash(
-                user_exists["password"], request.form.get("password")):
+                    user_exists["password"], request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
                 flash("Hi {}, Welcome!".format(
                     request.form.get("username")))
                 return redirect(url_for(
                     "profile", username=session["user"]))
         else:
+            # flash to show user credentials was incorrect
             flash("Password and/or Username is Incorrect")
             return redirect(url_for("login"))
-    
+
     else:
+        # flash to show user credentials was incorrect
         flash("Password and/or Username is Incorrect")
         return redirect(url_for("login"))
-    
+
     return render_template(url_for("login_page.html"))
 
 
 if __name__ == "__main__":
-    app.run(host = os.environ.get("IP"),
-            port = int(os.environ.get("PORT")),
-            debug = True)
+    app.run(host=os.environ.get("IP"),
+            port=int(os.environ.get("PORT")),
+            debug=True)
