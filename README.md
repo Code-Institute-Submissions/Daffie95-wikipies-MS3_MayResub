@@ -21,7 +21,8 @@ Wireframe and user flowchart can be found in the documentation folder.
 
 ## 2. Updates Timeline.
 > 0.2 **2021-03-15**
-> > Starting development of login page/route
+> > Created routing for login with functions to read hashed password and put user in session<br>
+> > Starting development of login page/route<br>
 > > Finished registration page<br>
 > > Registration function works and uses Werkzeug password hashing<br>
 > > Built the function for new registrated users to be stored in the database<br>
