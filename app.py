@@ -71,7 +71,7 @@ def login():
                 flash("Hi, Welcome {}".format(
                     request.form.get("username")))
                 return redirect(url_for(
-                    "profile", username=session["user"])))
+                    "profile", username=session["user"]))
 
 
 if __name__ == "__main__":
