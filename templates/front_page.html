@@ -33,7 +33,7 @@
                 <a href="#" class="btn-small waves-effect waves-light green">Edit</a>
             </div>
             <div class="col s9">
-                <strong>{{ recipe.recipe_name|capitalize }}</strong> Written by: {{ recipe.created_by }}
+                <strong>{{ recipe.recipe_name|capitalize }}</strong> Written by: {{ recipe.created_by|capitalize }}
                 <!-- Jinja statement to conditionally check for allergens -->
                 {% if recipe.gluten == "yes" %}
                 <i class="material-icons white-text tooltipped" data-position="right"
