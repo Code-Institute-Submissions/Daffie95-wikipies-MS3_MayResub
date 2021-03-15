@@ -2,56 +2,48 @@
 {% block content %}
 
 <h3 class="teal-text darken-2 center-align">All Recipes</h3>
-<h4 class="teal-text darken-2 center align"></h4>
-<ul class="center align">
-    <li>
-        <i class="material-icons teal-text tooltipped allergen-icon" data-position="right"
-            data-tooltip="Contains Gluten">looks_one</i>
-        <p>Recipes with this icon contains gluten</p>
-    </li>
-    <li>
-        <i class="material-icons teal-text tooltipped" data-position="right"
-            data-tooltip="Contains Lactose">looks_two</i>
-        <p>Recipes with this icon contains lactose</p>
-    </li>
-</ul>
+<h4 class="teal-text darken-2 center align">Look for <i class="material-icons white-text tooltipped"
+        data-position="right" data-tooltip="Contains Gluten">looks_one</i><i
+        class="material-icons white-text tooltipped" data-position="right"
+        data-tooltip="Contains Lactose">looks_two</i><i class="material-icons white-text tooltipped"
+        data-position="right" data-tooltip="Contains Nuts">looks_three</i> for allergens</h4>
 
 
 {% if recipes|length > 0 %}
 <!-- collapsible to store recipes -->
-    <ul class="collapsible popout">
-        {% for recipe in recipes %}
-        <li>
-            <div class="collapsible-header white-text teal lighten-2">
-                <div class="col s3">
-                    <a href="#" class="btn-small waves-effect waves-light green">Edit</a>
-                </div>
-                <div class="col s9">
-                    <strong>{{ recipe.recipe_name|capitalize }}</strong> Written by: {{ recipe.created_by }}
-                    {% if recipe.gluten == "yes" %}
-                        <i class="material-icons white-text tooltipped" data-position="right"
-                            data-tooltip="Contains Gluten">looks_one</i>
-                    {% elif recipe.lactose == "yes" %}
-                        <i class="material-icons white-text tooltipped" data-position="right"
-                        data-tooltip="Contains Lactose">looks_two</i>¨
-                    {% elif recipe.nuts == "yes" %}
-                        <i class="material-icons white-text tooltipped" data-position="right"
-                        data-tooltip="Contains Nuts">looks_three</i>¨
-                    {% endif %}
-                </div>
+<ul class="collapsible popout">
+    {% for recipe in recipes %}
+    <li>
+        <div class="collapsible-header white-text teal lighten-2">
+            <div class="col s3">
+                <a href="#" class="btn-small waves-effect waves-light green">Edit</a>
             </div>
-            <div class="collapsible-body">
-                <strong>This is a {{ recipe.category|capitalize }} recipe</strong>
-                <h6>Steps:</h6>
-                <p>{{ recipe.recipe_desc }}</p>
-                <strong>ingredients needed:</strong>
-                <p>{{ recipe.ingredients }}</p>
+            <div class="col s9">
+                <strong>{{ recipe.recipe_name|capitalize }}</strong> Written by: {{ recipe.created_by }}
+                {% if recipe.gluten == "yes" %}
+                <i class="material-icons white-text tooltipped" data-position="right"
+                    data-tooltip="Contains Gluten">looks_one</i>
+                {% elif recipe.lactose == "yes" %}
+                <i class="material-icons white-text tooltipped" data-position="right"
+                    data-tooltip="Contains Lactose">looks_two</i>¨
+                {% elif recipe.nuts == "yes" %}
+                <i class="material-icons white-text tooltipped" data-position="right"
+                    data-tooltip="Contains Nuts">looks_three</i>¨
+                {% endif %}
             </div>
-        </li>
-        {% endfor %}
-    </ul>
+        </div>
+        <div class="collapsible-body">
+            <strong>This is a {{ recipe.category|capitalize }} recipe</strong>
+            <h6>Steps:</h6>
+            <p>{{ recipe.recipe_desc }}</p>
+            <strong>ingredients needed:</strong>
+            <p>{{ recipe.ingredients }}</p>
+        </div>
+    </li>
+    {% endfor %}
+</ul>
 {% else %}
-    <h4 class="red-text text-lighten-1 center align">No Recipes Found</h4>
+<h4 class="red-text text-lighten-1 center align">No Recipes Found</h4>
 {% endif %}
 
 
