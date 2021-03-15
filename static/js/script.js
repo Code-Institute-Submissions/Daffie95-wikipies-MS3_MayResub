@@ -4,5 +4,5 @@ $(document).ready(function () {
     // function to active collapsible to be clickable
     $('.collapsible').collapsible();
     // function to activate tooltip on hover
-    $('.tooltipped').tooltip();
+    $('.tooltipped').tooltip("outDuration", "150");
 });
