@@ -31,7 +31,7 @@
                     <li><a href="{{ url_for('login') }}">Log In</a></li>
                     <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                     <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-                    <li><a href="#">Test2</a></li>
+                    <li><a href="{{ url_for('upload_recipe') }}">Test2</a></li>
                     <li><a href="#">Test3</a></li>
                     <li><a href="#">Test4</a></li>
                 </ul>
@@ -47,7 +47,7 @@
             <li><a href="{{ url_for('login') }}">Log In</a></li>
             <li><a href="{{ url_for('logout') }}">Log Out</a></li>
             <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-            <li><a href="#">Test1</a></li>
+            <li><a href="{{ url_for('upload_recipe') }}">Test1</a></li>
             <li><a href="#">Test2</a></li>
             <li><a href="#">Test3</a></li>
             <li><a href="#">Test4</a></li>
