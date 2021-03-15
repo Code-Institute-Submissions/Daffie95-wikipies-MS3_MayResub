@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- linking materialize icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
     <!-- linking materialize stylesheet -->
@@ -38,7 +38,7 @@
 
 
 
-    <!-- smallscreen/mobile nav -->
+        <!-- smallscreen/mobile nav -->
         <ul class="sidenav" id="mobile-demo">
             <li><a href="#">Test1</a></li>
             <li><a href="#">Test2</a></li>
@@ -48,6 +48,16 @@
             <li><a href="#">Test6</a></li>
         </ul>
     </header>
+
+
+    <!-- section for all flash messages -->
+    <section>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            {% endif %}
+        {% endwith %}
+    </section>
+
 
     <!-- content injector -->
     <main class="container">
