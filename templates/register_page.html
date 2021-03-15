@@ -1,53 +1,53 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="center-align">Registration Page</h3>
-<!-- first name input field -->
-<div class="row">
-    <form action="" class="col s12 m8 offset-m2" method="" action="">
-        <div class="card-panel small hoverable">
-            <div class="row">
-                <div class="input-field col s12"> 
-                    <input type="text" id="firstname" name="firstname" minlength="5" maxlength="20"
-                        pattern="^[a-zA-Z{5,20}$" class="validate" required>
-                    <label for="firstname">First Name</label>
-                </div>
-            </div>
-            <!-- last name input field -->
-            <div class="row">
-                <div class="input-field col s12">
-                    <input type="text" id="lastname" name="lastname" minlength="5" maxlength="20"
-                        pattern="^[a-zA-Z{5,20}$" class="validate" required>
-                    <label for="lastname">Last Name</label>
-                </div>
-            </div>
-            <!-- username input field -->
-            <div class="row">
-                <div class="input-field col s12">
-                    <input type="text" id="username" name="username" minlength="5" maxlength="20"
-                        pattern="^[a-zA-Z0-9{5,20}$" class="validate" required>
-                    <label for="username">User Name</label>
-                </div>
-            </div>
-            <!-- password input field -->
-            <div class="row">
-                <div class="input-field col s12">
-                    <input type="text" id="password" name="password" minlength="5" maxlength="20"
-                        pattern="^[a-zA-Z0-9{5,20}$" class="validate" required>
-                    <label for="password">Password</label>
-                </div>
-            </div>
-        </div>
-    </form>
+    <h3 class="center-align">Registration Page</h3>
+    <!-- first name input field -->
     <div class="row">
-        <div class="col s12">
-            <p class="center-align">
-                Already Registered?
-                <a class="waves-effect waves-light btn teal lighten-2"><i class="material-icons left">person</i>Log in</a>
-            </p>
+        <form action="" class="col s12 m8 offset-m2" method="" action="">
+            <div class="card-panel small hoverable">
+                <div class="row">
+                    <div class="input-field col s12"> 
+                        <input type="text" id="firstname" name="firstname" minlength="5" maxlength="20"
+                            pattern="^[a-zA-Z{5,20}$" class="validate" required>
+                        <label for="firstname">First Name</label>
+                    </div>
+                </div>
+                <!-- last name input field -->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="text" id="lastname" name="lastname" minlength="5" maxlength="20"
+                            pattern="^[a-zA-Z{5,20}$" class="validate" required>
+                        <label for="lastname">Last Name</label>
+                    </div>
+                </div>
+                <!-- username input field -->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="text" id="username" name="username" minlength="5" maxlength="20"
+                            pattern="^[a-zA-Z0-9{5,20}$" class="validate" required>
+                        <label for="username">User Name</label>
+                    </div>
+                </div>
+                <!-- password input field -->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="text" id="password" name="password" minlength="5" maxlength="20"
+                            pattern="^[a-zA-Z0-9{5,20}$" class="validate" required>
+                        <label for="password">Password</label>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="row">
+            <div class="col s12">
+                <p class="center-align">
+                    Already Registered?
+                    <a class="waves-effect waves-light btn teal lighten-2"><i class="material-icons left">person</i>Log in</a>
+                </p>
+            </div>
         </div>
     </div>
-</div>
 
 
 
