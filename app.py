@@ -109,7 +109,8 @@ def upload_recipe:
     if request.method == "POST":
         recipe = {
             "recipe_name": request.form.get("recipe_name"),
-            "gategory": request.form.get("category"),
+            "category": request.form.get("category"),
+
 
         }
 
