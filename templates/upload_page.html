@@ -8,40 +8,40 @@
             <div class="row">
                 <div class="input-field col s12">
                     <!-- recipe name -->
-                    <input id="recipe_name" name="recipe_name" minlength="5" maxlength="50"
-                        type="text" class="validate" required>
+                    <input id="recipe_name" name="recipe_name" minlength="5" maxlength="50" type="text" class="validate"
+                        required>
                     <label for="recipe_name">Recipe Name</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
                     <!-- category -->
-                    <input id="category" name="category" minlength="5" maxlength="20"
-                        type="text" class="validate" required placeholder="Breakfast, Lunch, or Dinner?">
+                    <input id="category" name="category" minlength="5" maxlength="20" type="text" class="validate" required
+                        placeholder="Breakfast, Lunch, or Dinner?">
                     <label for="category">Category</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
                     <!-- recipe description -->
-                    <input id="recipe_desc" name="recipe_desc" minlength="5" maxlength="200"
-                        type="text" class="validate" required placeholder="Describe the recipe">
+                    <input id="recipe_desc" name="recipe_desc" minlength="5" maxlength="200" type="text" class="validate"
+                        required placeholder="Describe the recipe">
                     <label for="recipe_desc">Description</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
                     <!-- recipe ingredients -->
-                    <input id="ingredients" name="ingredients" minlength="5" maxlength="200"
-                        type="text" class="validate" required placeholder="Ingredient and measurements, separate with a comma">
+                    <input id="ingredients" name="ingredients" minlength="5" maxlength="200" type="text" class="validate"
+                        required placeholder="Ingredient and measurements, separate with a comma">
                     <label for="ingredients">Ingredients</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
                     <!-- steps -->
-                    <input id="steps" name="steps" minlength="5" maxlength="300"
-                        type="text" class="validate" required placeholder="How do you create this dish?">
+                    <input id="steps" name="steps" minlength="5" maxlength="300" type="text" class="validate" required
+                        placeholder="How do you create this dish?">
                     <label for="steps">Steps</label>
                 </div>
             </div>
@@ -53,8 +53,20 @@
                     </button>
                 </div>
             </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <div class="switch">
+                        <!-- add icon to match display on frontpage -->
+                        <label for="gluten">
+                            <input type="checkbox" id="gluten" name="gluten">
+                            <span class="lever"></span>
+                            Gluten
+                        </label>
+                    </div>
+                </div>
+            </div>
         </form>
     </div>
-        </form>
+    </form>
     </div>
 {% endblock %}
