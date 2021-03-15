@@ -46,7 +46,7 @@ Wireframe and user flowchart can be found in the documentation folder.
 > > frontpage now renders current recipes from MongoDB<br>
 > > 
 
-## 3. Planned Updates. (In order of prioritization)
+## 3. Planned Updates.
 > Implement Search Function<br>
 > Implement User auth<br>
 > Implement Creating of Recipes<br>
