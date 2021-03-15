@@ -19,39 +19,41 @@
 
 {% if recipes|length > 0 %}
 <!-- collapsible to store recipes -->
-<ul class="collapsible">
-    {% for recipe in recipes %}
-    <li>
-        <div class="collapsible-header white-text teal lighten-2">
-            <div class="col s3">
-                <a href="#" class="btn-small waves-effect waves-light green">Edit</a>
+    <ul class="collapsible">
+        {% for recipe in recipes %}
+        <li>
+            <div class="collapsible-header white-text teal lighten-2">
+                <div class="col s3">
+                    <a href="#" class="btn-small waves-effect waves-light green">Edit</a>
+                </div>
+                <div class="col s9">
+                    <strong>{{ recipe.recipe_name }}</strong> Written by: {{ recipe.created_by }}
+                    {% if recipe.gluten == "yes" %}
+                        <i class="material-icons white-text tooltipped" data-position="right"
+                            data-tooltip="Contains Gluten">looks_one</i>
+                    {% elif recipe.lactose == "yes" %}
+                        <i class="material-icons white-text tooltipped" data-position="right"
+                        data-tooltip="Contains Lactose">looks_two</i>¨
+                    {% elif recipe.nuts == "yes" %}
+                        <i class="material-icons white-text tooltipped" data-position="right"
+                        data-tooltip="Contains Nuts">looks_three</i>¨
+                    {% endif %}
+                </div>
             </div>
-            <div class="col s9">
-                <strong>{{ recipe.recipe_name }}</strong> Written by: {{ recipe.created_by }}
-                {% if recipe.gluten == "yes" %}
-                    <i class="material-icons white-text tooltipped" data-position="right"
-                        data-tooltip="Contains Gluten">looks_one</i>
-                {% elif recipe.lactose == "yes" %}
-                    <i class="material-icons white-text tooltipped" data-position="right"
-                    data-tooltip="Contains Lactose">looks_two</i>¨
-                {% elif recipe.nuts == "yes" %}
-                    <i class="material-icons white-text tooltipped" data-position="right"
-                    data-tooltip="Contains Nuts">looks_three</i>¨
-                {% endif %}
+            <div class="collapsible-body">
+                <strong>This is a {{ recipe.category }} recipe</strong>
+                <h6>Steps:</h6>
+                <p>{{ recipe.recipe_desc }}</p>
+                <strong>ingredients needed:</strong>
+                <p>{{ recipe.ingredients }}</p>
             </div>
-        </div>
-        <div class="collapsible-body">
-            <strong>This is a {{ recipe.category }} recipe</strong>
-            <h6>Steps:</h6>
-            <p>{{ recipe.recipe_desc }}</p>
-            <strong>ingredients needed:</strong>
-            <p>{{ recipe.ingredients }}</p>
-        </div>
-    </li>
-    {% endfor %}
-</ul>
+        </li>
+        {% endfor %}
+    </ul>
 {% else %}
-<h4 class="red-text text-lighten-1 center align">No Recipes Found</h4>
+    <h4 class="red-text text-lighten-1 center align">No Recipes Found</h4>
+{% endif %}
+
 
 
 
