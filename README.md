@@ -147,5 +147,17 @@ description to declare what I was working on, more like workin on a separate bra
 
 ## 6. Testing.
 
+## Testing
+Accepted state would be if user is redirected to the correct link or if a message is displayed if credentials are not met. If measures are met answer will be "works".
+
+| links | registrating | login | upload recipe | profile | log out | search | edit recipe | delete |  |
+|-|-|-|-|-|-|-|-|-|-|
+| all works | works | works | works | works | works | works | works | works |  |
+|  |  |  |  |  |  |  |  |  |  |
+
+
+ 
+
+
 ## 7. Conclusions.
 Due to some extensive computer issues this project has ben put under intense time restraints, once again I would like to reach out and thank CI Student Counceling for their understanding and very helpful ways.
