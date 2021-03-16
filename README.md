@@ -20,6 +20,7 @@ Wireframe and user flowchart can be found in the documentation folder.
 
 ## 2. Updates Timeline.
 > 0.3 **2021-03-16**
+> > Styled webpage globally with button colors, card panels, and label texts.<br>
 > > Editing recipes now looks as intended<br>
 > > Editing recipes now works as intended<br>
 > > Fixed nested IF statements messing with displayin allergn icons only if the previous was checked.
@@ -69,7 +70,7 @@ Wireframe and user flowchart can be found in the documentation folder.
 > > added template extentions from base.html<br>
 > > extended base.html to front_page.html<br>
 > > frontpage now renders current recipes from MongoDB<br>
-> > 
+
 
 ## 3. Planned Updates.
 > ~~Create cancel button on edit recipe page to redirect user to frontpage<br>~~
