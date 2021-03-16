@@ -10,3 +10,7 @@ a.brand-logo {
     line-height: 3;
 
 }
+
+a.btn-small {
+    padding: 0.4rem;
+}
