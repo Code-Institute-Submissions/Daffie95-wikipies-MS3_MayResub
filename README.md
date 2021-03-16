@@ -73,7 +73,7 @@ Wireframe and user flowchart can be found in the documentation folder.
 > Revamp how recipes display on frontpage<br>
 > ~~Implement Search Function~~<br>
 > Move flash messages to modal<br>
-> ~~Implement User auth<br>~~
+> ~~Implement User auth<br>~~<br>
 > ~~Add more Allergen icons (on frontpage/view all recipes using ***if x on then***<br>~~
 > ~~Implement Allergen functions in update/edit recipe to be toggles<br>~~
 > ~~Implement Creating of Recipes<br>~~
@@ -85,6 +85,7 @@ Wireframe and user flowchart can be found in the documentation folder.
 > Style nav<br>
 > Style text content<br>
 > Style brand logo<br>
+> Style Flash Messages<br>
 
 ## 4. Bugs & Errors.
 
