@@ -15,7 +15,7 @@
                 {% for recipe in recipes %}
                     {% if session.user|lower == recipe.created_by|lower %}
                         <li>
-                            <div class="collapsible-header white-text teal lighten-2 col s12">
+                            <div class="collapsible-header white-text red accent-2 col s12">
                                 <div class="col s3">
                                     <div class="col s3">
                                         {% if session.user|lower == recipe.created_by|lower %}
