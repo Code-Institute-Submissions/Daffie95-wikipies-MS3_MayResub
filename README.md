@@ -123,8 +123,18 @@ Wireframe and user flowchart can be found in the documentation folder.
 > > Page does not load and [TO_MANY_REDIRECTS], and heroku returns a HTTP code of 302.
 
 > **Resolved Y/N:**
-> ***Y*** The 302 code indicates redirecting, but the log does not show an endpoint, leading to a probable error in the routing for the page.
+> > ***Y*** The 302 code indicates redirecting, but the log does not show an endpoint, leading to a probable error in the routing for the page.
 > resolved by editing the /login function with correct indentation.
+
+4. 2021-03-16
+> **Expected Result:**
+> > creating CSS code targeting elements in the html should change the appearance of the output
+
+> **Actual Result:**
+> > The CSS code does not change the appearance of the html, it does work with in-line customization however.
+
+> **Resolved Y/N:**
+> > ***N***
 
 ## 5. Additional Comments.
 The commits are somewhat inconsistent, the later ones will use the description to specify the changes in the files. 
