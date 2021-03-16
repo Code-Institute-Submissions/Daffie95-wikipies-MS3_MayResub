@@ -124,6 +124,9 @@ Wireframe and user flowchart can be found in the documentation folder.
 ## 5. Additional Comments.
 The commits are somewhat inconsistent, the later ones will use the description to specify the changes in the files. 
 I am using GitHub Desktop and it was simply more effective for me to write in the description.
+<hr>
+I have not found a way to visualize functional previews of jinja code on VsCode, thus the large ammount of commits to the main branch.<br>
+I pushed commits for testing to push changes to heroku and to display the changes made in the code.
 
 ## 6. Testing.
 
