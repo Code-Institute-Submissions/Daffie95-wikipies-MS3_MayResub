@@ -5,48 +5,48 @@
 <h3 class="center align">Edit {{ recipe.recipe_name }}</h3>
 
 
-<div class="row card-panel red accent-2">
+<div class="row card-panel">
     <form action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" method="POST" class="col s12">
         <div class="row">
             <div class="input-field col s12">
                 <input id="recipe_name" name="recipe_name" minlength="5" maxlength="50" type="text" class="validate"
                     value="{{ recipe.recipe_name }}" required>
-                <label for="recipe_name">Recipe Name</label>
+                <label for="recipe_name" class="black-text">Recipe Name</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
                 <input id="category" name="category" minlength="5" maxlength="20" type="text" class="validate" required
                     value="{{ recipe.category }}">
-                <label for="category">Category</label>
+                <label for="category" class="black-text">Category</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
                 <input id="recipe_desc" name="recipe_desc" minlength="5" maxlength="200" type="text" class="validate"
                     required value="{{ recipe.recipe_desc }}">
-                <label for="recipe_desc">Description</label>
+                <label for="recipe_desc" class="black-text">Description</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
                 <input id="ingredients" name="ingredients" minlength="5" maxlength="200" type="text" class="validate"
                     required value="{{ recipe.ingredients }}">
-                <label for="ingredients">Ingredients</label>
+                <label for="ingredients" class="black-text">Ingredients</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
                 <input id="steps" name="steps" minlength="5" maxlength="300" type="text" class="validate" required
                     value="{{ recipe.steps }}">
-                <label for="steps">Steps</label>
+                <label for="steps" class="black-text">Steps</label>
             </div>
         </div>
         <h5 class="center align">Allergens</h5>
         <div class="row center align">
             <div class="input-field col s4">
                 <div class="switch">
-                    <label for="gluten">
+                    <label for="gluten" class="black-text">
                         {% if recipe.gluten == "on" %}
                         <input type="checkbox" id="gluten" name="gluten" value="{{ recipe.gluten }}" checked>
                         {% else %}
@@ -59,7 +59,7 @@
             </div>
             <div class="input-field col s4">
                 <div class="switch">
-                    <label for="lactose">
+                    <label for="lactose" class="black-text">
                         {% if recipe.lactose == "on" %}
                         <input type="checkbox" id="lactose" name="lactose" value="{{ recipe.lactose }}" checked>
                         {% else %}
@@ -73,7 +73,7 @@
             <div class="input-field col s4">
                 <div class="switch">
                     <div class="switch">
-                        <label for="nuts">
+                        <label for="nuts" class="black-text">
                             {% if recipe.nuts == "on" %}
                             <input type="checkbox" id="nuts" name="nuts" value="{{ recipe.nuts }}" checked>
                             {% else %}
@@ -90,7 +90,7 @@
             <div class="input-field col s4">
                 <div class="switch">
                     <div class="switch">
-                        <label for="peanuts">
+                        <label for="peanuts" class="black-text">
                             {% if recipe.peanuts == "on" %}
                             <input type="checkbox" id="peanuts" name="peanuts" value="{{ recipe.peanuts }}" checked>
                             {% else %}
@@ -105,7 +105,7 @@
             <div class="input-field col s4">
                 <div class="switch">
                     <div class="switch">
-                        <label for="shellfish">
+                        <label for="shellfish" class="black-text">
                             {% if recipe.shellfish == "on" %}
                             <input type="checkbox" id="shellfish" name="shellfish" value="{{ recipe.shellfish }}"
                                 checked>
@@ -121,7 +121,7 @@
             <div class="input-field col s4">
                 <div class="switch">
                     <div class="switch">
-                        <label for="fish">
+                        <label for="fish" class="black-text">
                             {% if recipe.fish == "on" %}
                             <input type="checkbox" id="fish" name="fish" value="{{ recipe.fish }}" checked>
                             {% else %}
