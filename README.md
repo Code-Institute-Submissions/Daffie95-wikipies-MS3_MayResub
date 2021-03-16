@@ -20,8 +20,9 @@ Wireframe and user flowchart can be found in the documentation folder.
 
 ## 2. Updates Timeline.
 > 0.3 **2021-03-16**
-> > Created edit functionality with conditional if statements to declare wether allergens were toggled in the original recipe.
-> > Created delete functionality to use .remove() on the ObjectId in the database.
+> > Made allergen switches occupy 3 spaces each and center align them on 2 rows<br>
+> > Created edit functionality with conditional if statements to declare wether allergens were toggled in the original recipe.<br>
+> > Created delete functionality to use .remove() on the ObjectId in the database.<br>
 
 > 0.2 **2021-03-15**
 > > Created edit page using the upload inserts
