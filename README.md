@@ -20,6 +20,8 @@ Wireframe and user flowchart can be found in the documentation folder.
 
 ## 2. Updates Timeline.
 > 0.3 **2021-03-16**
+> > Editing recipes now looks as intended<br>
+> > Editing recipes now works as intended<br>
 > > Fixed nested IF statements messing with displayin allergn icons only if the previous was checked.
 > > Made allergen switches occupy 3 spaces each and center align them on 2 rows<br>
 > > Created edit functionality with conditional if statements to declare wether allergens were toggled in the original recipe.<br>
@@ -70,6 +72,7 @@ Wireframe and user flowchart can be found in the documentation folder.
 > > 
 
 ## 3. Planned Updates.
+> Create cancel button on edit recipe page to redirect user to frontpage<br>
 > ~~Create If statement on edit page to render all the allergens toggles was on or off before editing<br>~~
 > Create function to display users recipes on profile page<br>
 > Revamp how recipes display on frontpage<br>
