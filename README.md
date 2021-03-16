@@ -126,7 +126,8 @@ The commits are somewhat inconsistent, the later ones will use the description t
 I am using GitHub Desktop and it was simply more effective for me to write in the description.
 <hr>
 I have not found a way to visualize functional previews of jinja code on VsCode, thus the large ammount of commits to the main branch.<br>
-I pushed commits for testing to push changes to heroku and to display the changes made in the code.
+I pushed commits for testing to push changes to heroku and to display the changes made in the code. This did force me to push multiple commits with the same
+description to declare what I was working on, more like workin on a separate branch, but instead doing testing on main.
 
 ## 6. Testing.
 
