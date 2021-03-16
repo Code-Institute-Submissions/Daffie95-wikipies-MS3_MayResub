@@ -6,6 +6,10 @@ a.brand-logo {
     margin-left: 1rem;
 }
 
+nav ul a {
+    font-size: 25px;
+}
+
 .flashes h5 {
     line-height: 3;
 
