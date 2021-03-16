@@ -47,55 +47,55 @@
                 <label for="steps">Steps</label>
             </div>
         </div>
-        <div class="col s4">
-            <div class="input-field col s4">
-                <div class="switch">
-                    <label for="gluten">
-                        {% if recipe.gluten == "on" %}
+            <div class="col s4">
+                <div class="input-field col s4">
+                    <div class="switch">
+                        <label for="gluten">
+                            {% if recipe.gluten == "on" %}
                             <input type="checkbox" id="gluten" name="gluten" value="{{ recipe.gluten }}" checked>
-                        {% else %}
+                            {% else %}
                             <input type="checkbox" id="gluten" name="gluten" value="{{ recipe.gluten }}">
-                        {% endif %}
-                        <span class="lever"></span>
-                        Gluten
-                    </label>
+                            {% endif %}
+                            <span class="lever"></span>
+                            Gluten
+                        </label>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col s4">
-            <div class="input-field col s4">
-                <div class="switch">
-                    <label for="lactose">
-                        {% if recipe.lactose == "on" %}
+            <div class="col s4">
+                <div class="input-field col s4">
+                    <div class="switch">
+                        <label for="lactose">
+                            {% if recipe.lactose == "on" %}
                             <input type="checkbox" id="lactose" name="lactose" value="{{ recipe.lactose }}" checked>
-                        {% else %}
+                            {% else %}
                             <input type="checkbox" id="lactose" name="gluten" value="{{ recipe.lactose }}">
-                        {% endif %}
-                        <span class="lever"></span>
-                        Lactose
-                    </label>
+                            {% endif %}
+                            <span class="lever"></span>
+                            Lactose
+                        </label>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col s4">
-            <div class="input-field col s4">
-                <div class="switch">
-                    <label for="nuts">
-                        {% if recipe.nuts == "on" %}
+            <div class="col s4">
+                <div class="input-field col s4">
+                    <div class="switch">
+                        <label for="nuts">
+                            {% if recipe.nuts == "on" %}
                             <input type="checkbox" id="nuts" name="nuts" value="{{ recipe.nuts }}" checked>
-                        {% else %}
+                            {% else %}
                             <input type="checkbox" id="nuts" name="nuts" value="{{ recipe.nuts }}">
-                        {% endif %}
-                        <span class="lever"></span>
-                        Nuts
-                    </label>
+                            {% endif %}
+                            <span class="lever"></span>
+                            Nuts
+                        </label>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col s4">
-            <div class="input-field col s4">
-                <div class="switch">
-                    <label for="peanuts">
+            <div class="col s4">
+                <div class="input-field col s4">
+                    <div class="switch">
+                        <label for="peanuts">
                         {% if recipe.peanuts == "on" %}
                             <input type="checkbox" id="peanuts" name="peanuts" value="{{ recipe.peanuts }}" checked>
                         {% else %}
@@ -111,7 +111,8 @@
                     <div class="switch">
                         <label for="shellfish">
                             {% if recipe.shellfish == "on" %}
-                                <input type="checkbox" id="shellfish" name="shellfish" value="{{ recipe.shellfish }}" checked>
+                                <input type="checkbox" id="shellfish" name="shellfish" value="{{ recipe.shellfish }}"
+                                checked>
                             {% else %}
                                 <input type="checkbox" id="shellfish" name="shellfish" value="{{ recipe.shellfish }}">
                             {% endif %}
