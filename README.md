@@ -75,7 +75,7 @@ Wireframe and user flowchart can be found in the documentation folder.
 > ~~Create cancel button on edit recipe page to redirect user to frontpage<br>~~
 > ~~Create If statement on edit page to render all the allergens toggles was on or off before editing<br>~~
 > ~~Create function to display users recipes on profile page<br>~~
-> Revamp how recipes display on frontpage<br>
+> ~~Revamp how recipes display on frontpage and profilepage(Add steps)<br>~~
 > ~~Implement Search Function~~<br>
 > Move flash messages to modal<br>
 > ~~Implement User auth<br>~~<br>
