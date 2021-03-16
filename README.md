@@ -77,7 +77,7 @@ Wireframe and user flowchart can be found in the documentation folder.
 > ~~Create function to display users recipes on profile page<br>~~
 > ~~Revamp how recipes display on frontpage and profilepage(Add steps)<br>~~
 > ~~Implement Search Function~~<br>
-> Move flash messages to modal<br>
+> ~~Move flash messages to modal<br>~~(focusing on styling instead, if there is time I will try this)
 > ~~Implement User auth<br>~~<br>
 > ~~Add more Allergen icons (on frontpage/view all recipes using ***if x on then***<br>~~
 > ~~Implement Allergen functions in update/edit recipe to be toggles<br>~~
