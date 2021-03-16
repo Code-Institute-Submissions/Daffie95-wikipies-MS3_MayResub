@@ -86,11 +86,11 @@ Wireframe and user flowchart can be found in the documentation folder.
 > ~~Implement Deleting Recipes<br>~~
 > ~~Implement Functional Registration~~<br>
 > Update Project Planning<br>
-> style buttons to all look the same<br>
-> Style nav<br>
-> Style text content<br>
-> Style brand logo<br>
-> Style Flash Messages<br>
+> ~~style buttons to all look the same<br>~~
+> ~~Style nav<br>~~
+> ~~Style text content<br>~~
+> ~~Style brand logo<br>~~
+> ~~Style Flash Messages<br>~~
 
 ## 4. Bugs & Errors.
 
