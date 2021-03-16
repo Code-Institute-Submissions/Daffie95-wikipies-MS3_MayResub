@@ -9,7 +9,6 @@
     <form action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" method="POST" class="col s12">
         <div class="row">
             <div class="input-field col s12">
-                <!-- recipe name -->
                 <input id="recipe_name" name="recipe_name" minlength="5" maxlength="50" type="text" class="validate"
                     value="{{ recipe.recipe_name }}" required>
                 <label for="recipe_name">Recipe Name</label>
@@ -17,7 +16,6 @@
         </div>
         <div class="row">
             <div class="input-field col s12">
-                <!-- category -->
                 <input id="category" name="category" minlength="5" maxlength="20" type="text" class="validate" required
                     value="{{ recipe.category }}">
                 <label for="category">Category</label>
@@ -25,7 +23,6 @@
         </div>
         <div class="row">
             <div class="input-field col s12">
-                <!-- recipe description -->
                 <input id="recipe_desc" name="recipe_desc" minlength="5" maxlength="200" type="text" class="validate"
                     required value="{{ recipe.recipe_desc }}">
                 <label for="recipe_desc">Description</label>
@@ -33,7 +30,6 @@
         </div>
         <div class="row">
             <div class="input-field col s12">
-                <!-- recipe ingredients -->
                 <input id="ingredients" name="ingredients" minlength="5" maxlength="200" type="text" class="validate"
                     required value="{{ recipe.ingredients }}">
                 <label for="ingredients">Ingredients</label>
@@ -41,7 +37,6 @@
         </div>
         <div class="row">
             <div class="input-field col s12">
-                <!-- steps -->
                 <input id="steps" name="steps" minlength="5" maxlength="300" type="text" class="validate" required
                     value="{{ recipe.steps }}">
                 <label for="steps">Steps</label>
@@ -131,7 +126,6 @@
             </div>
         </div>
 </div>
-<!-- submit recipe button -->
 <div class="row">
     <div class="col s12 center-align">
         <button type="submit" class="btn-large teal lighten-4">
