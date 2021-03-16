@@ -30,8 +30,8 @@
         <div class="collapsible-header red accent-2 col s12">
             <div class="col s3">
                 {% if session.user|lower == recipe.created_by|lower %}
-                <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-small teal">Edit</a>
-                <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn-small light-blue">Delete</a>
+                <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-small teal small-button">Edit</a>
+                <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn-small light-blue small-button">Delete</a>
                 {% endif %}
             </div>
             <div class="col s9">
@@ -66,7 +66,7 @@
             <strong>This is a {{ recipe.category|capitalize }} recipe</strong>
             <p>{{ recipe.recipe_desc }}</p>
             <strong>ingredients needed:</strong>
-            <p>{{ recipe.ingredients }}</p>
+            <p>{{ recipe.ingredients|capitalize }}</p>
             <strong>Steps:</strong>
             <p>{{ recipe.steps }}</p>
         </div>

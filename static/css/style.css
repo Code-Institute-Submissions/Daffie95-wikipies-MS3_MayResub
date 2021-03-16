@@ -11,6 +11,6 @@ a.brand-logo {
 
 }
 
-a.btn-small {
-    padding: 0.4rem;
+.small-button {
+    padding: 5px;
 }
