@@ -132,7 +132,6 @@ def upload_recipe():
             "ingredients": request.form.get("ingredients"),
             "steps": request.form.get("steps"),
             "recipe_desc": request.form.get("recipe_desc"),
-            "recipe_steps": request.form.get("recipe_steps"),
             "created_by": session["user"]
         }
         # inserts the dictionary "recipe" in the database
@@ -165,7 +164,6 @@ def edit_recipe(recipe_id):
             "ingredients": request.form.get("ingredients"),
             "steps": request.form.get("steps"),
             "recipe_desc": request.form.get("recipe_desc"),
-            "recipe_steps": request.form.get("recipe_steps"),
             "created_by": session["user"]
         }
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, edit)
