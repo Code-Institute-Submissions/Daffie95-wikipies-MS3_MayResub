@@ -46,11 +46,7 @@
                 <div class="input-field col s4">
                     <div class="switch">
                         <label for="gluten">
-                            {% if recipe.gluten == "on" %}
-                                <input type="checkbox" id="gluten" name="gluten" value="{{ recipe.gluten }}" checked>
-                            {% else %}
                                 <input type="checkbox" id="gluten" name="gluten" value="{{ recipe.gluten }}">
-                            {% endif %}
                             <span class="lever"></span>
                             Gluten
                         </label>
