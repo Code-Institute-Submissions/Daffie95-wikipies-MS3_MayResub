@@ -62,7 +62,6 @@
                 {% endif %}
             </div>
         </div>
-        <!-- collapsible body returns category, description, and ingredients -->
         <div class="collapsible-body">
             <strong>This is a {{ recipe.category|capitalize }} recipe</strong>
             <h6>Steps:</h6>
@@ -73,7 +72,6 @@
     </li>
     {% endfor %}
 </ul>
-<!-- else function when no searches were found -->
 {% else %}
 <h4 class="red-text text-lighten-1 center align">No Recipes Found</h4>
 {% endif %}
