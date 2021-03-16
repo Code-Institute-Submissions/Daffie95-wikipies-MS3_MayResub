@@ -11,7 +11,7 @@
         </div>
     </div>
     <!-- need to filter this so that the user only sees recipes created by the user -->
-        {% if session.user|lower == recipes.created_by|lower %}
+        {% if session["user"]|lower == recipes.created_by|lower %}
             <ul class="collapsible popout">
                 <li>
                     <div class="collapsible-header white-text teal lighten-2 col s12">
