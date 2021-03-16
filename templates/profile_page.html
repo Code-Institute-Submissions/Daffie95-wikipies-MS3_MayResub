@@ -5,55 +5,58 @@
     <div class="col s12 m8 offset-m2">
         <div class="card-panel hoverable">
             <h4 class="center align teal-text darken-2">
-                {{ username|capitalize }}'s profile
+                {{ username|capitalize }}'s Recipes
             </h4>
         </div>
     </div>
 </div>
 <!-- need to filter this so that the user only sees recipes created by the user -->
-{% for recipe in recipes if session.username == recipes.created_by %}
-<ul class="collapsible popout">
-    <li>
-        <div class="collapsible-header white-text teal lighten-2 col s12">
-            <div class="col s3">
-                <a href="#" class="btn-small waves-effect waves-light green">Edit</a>
-            </div>
-            <div class="col s9">
-                <strong>{{ recipe.recipe_name|capitalize }}</strong> Written by: {{ recipe.created_by|capitalize }}
-                {% if recipe.gluten == "on" %}
-                <i class="material-icons white-text tooltipped" data-position="top"
-                data-tooltip="Contains Gluten">looks_one</i>
-                {% if recipe.lactose == "on" %}
-                    <i class="material-icons white-text tooltipped" data-position="top"
-                    data-tooltip="Contains Lactose">looks_two</i>
-                    {% if recipe.nuts == "on" %}
+{% if session.user %}
+    {% if session.user|lower == recipe.created_by|lower %}
+        <ul class="collapsible popout">
+            <li>
+                <div class="collapsible-header white-text teal lighten-2 col s12">
+                    <div class="col s3">
+                        <a href="#" class="btn-small waves-effect waves-light green">Edit</a>
+                    </div>
+                    <div class="col s9">
+                        <strong>{{ recipe.recipe_name|capitalize }}</strong> Written by: {{ recipe.created_by|capitalize }}
+                        {% if recipe.gluten == "on" %}
                         <i class="material-icons white-text tooltipped" data-position="top"
-                        data-tooltip="Contains Nuts">looks_3</i>
-                        {% if recipe.peanuts == "on" %}
+                        data-tooltip="Contains Gluten">looks_one</i>
+                        {% if recipe.lactose == "on" %}
                             <i class="material-icons white-text tooltipped" data-position="top"
-                            data-tooltip="Contains Peanuts">looks_4</i>
-                            {% if recipe.shellfish == "on" %}
+                            data-tooltip="Contains Lactose">looks_two</i>
+                            {% if recipe.nuts == "on" %}
                                 <i class="material-icons white-text tooltipped" data-position="top"
-                                data-tooltip="Contains Shellfish">looks_5</i>
-                                {% if recipe.fish == "on" %}
+                                data-tooltip="Contains Nuts">looks_3</i>
+                                {% if recipe.peanuts == "on" %}
                                     <i class="material-icons white-text tooltipped" data-position="top"
-                                    data-tooltip="Contains Fish">looks_6</i>
+                                    data-tooltip="Contains Peanuts">looks_4</i>
+                                    {% if recipe.shellfish == "on" %}
+                                        <i class="material-icons white-text tooltipped" data-position="top"
+                                        data-tooltip="Contains Shellfish">looks_5</i>
+                                        {% if recipe.fish == "on" %}
+                                            <i class="material-icons white-text tooltipped" data-position="top"
+                                            data-tooltip="Contains Fish">looks_6</i>
+                                        {% endif %}
+                                    {% endif %}
                                 {% endif %}
                             {% endif %}
                         {% endif %}
                     {% endif %}
-                {% endif %}
-            {% endif %}
-            </div>
-        </div>
-        <div class="collapsible-body">
-            <strong>This is a {{ recipe.category|capitalize }} recipe</strong>
-            <h6>Steps:</h6>
-            <p>{{ recipe.recipe_desc }}</p>
-            <strong>ingredients needed:</strong>
-            <p>{{ recipe.ingredients }}</p>
-        </div>
-    </li>
-</ul>
+                    </div>
+                </div>
+                <div class="collapsible-body">
+                    <strong>This is a {{ recipe.category|capitalize }} recipe</strong>
+                    <h6>Steps:</h6>
+                    <p>{{ recipe.recipe_desc }}</p>
+                    <strong>ingredients needed:</strong>
+                    <p>{{ recipe.ingredients }}</p>
+                </div>
+            </li>
+        </ul>
+    {% endif %}
+{% endif %}
 {% endfor %}
 {% endblock %}
