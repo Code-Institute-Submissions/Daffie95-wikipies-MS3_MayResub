@@ -18,8 +18,11 @@
 Wireframe and user flowchart can be found in the documentation folder.
 
 
-
 ## 2. Updates Timeline.
+> 0.3 **2021-03-16**
+> > Created edit functionality with conditional if statements to declare wether allergens were toggled in the original recipe.
+> > Created delete functionality to use .remove() on the ObjectId in the database.
+
 > 0.2 **2021-03-15**
 > > Created edit page using the upload inserts
 > > Created routing for edit_page
@@ -48,6 +51,7 @@ Wireframe and user flowchart can be found in the documentation folder.
 > > Added comments for JQuerys in scripts.js<br>
 > > Added ellergens icons with tooltip<br>
 > > Formatted Jinja output for recipes.<br>
+> > Configured .dockerfile for GitPod functionality
 
 
 > 0.1 **2021-03-14**
