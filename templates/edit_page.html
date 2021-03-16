@@ -77,7 +77,7 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row col s4">
             <div class="input-field col s4">
                 <div class="switch">
                     <label for="nuts">
@@ -92,7 +92,7 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row col s4">
             <div class="input-field col s4">
                 <div class="switch">
                     <label for="peanuts">
@@ -111,8 +111,7 @@
                     <div class="switch">
                         <label for="shellfish">
                             {% if recipe.shellfish == "on" %}
-                                <input type="checkbox" id="shellfish" name="shellfish" value="{{ recipe.shellfish }}"
-                                checked>
+                                <input type="checkbox" id="shellfish" name="shellfish" value="{{ recipe.shellfish }}" checked>
                             {% else %}
                                 <input type="checkbox" id="shellfish" name="shellfish" value="{{ recipe.shellfish }}">
                             {% endif %}
