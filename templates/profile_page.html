@@ -10,7 +10,6 @@
             </div>
         </div>
     </div>
-    <!-- collapsible to display recipes created by user in session -->
             <ul class="collapsible popout">
                 {% for recipe in recipes %}
                     {% if session.user|lower == recipe.created_by|lower %}
