@@ -142,7 +142,7 @@ I am using GitHub Desktop and it was simply more effective for me to write in th
 <hr>
 I have not found a way to visualize functional previews of jinja code on VsCode, thus the large ammount of commits to the main branch.<br>
 I pushed commits for testing to push changes to heroku and to display the changes made in the code. This did force me to push multiple commits with the same
-description to declare what I was working on, more like workin on a separate branch, but instead doing testing on main.
+description to declare what I was working on, more like workin on a separate branch, but instead doing testing on main. I appologize for the large ammounts of commits.
 
 ## 6. Testing.
 
