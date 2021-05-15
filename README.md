@@ -16,18 +16,26 @@
 
 
 ## 1. Project Planning.
-I wanted to create a recipe database long before I started the Code Institute program. As a chef, there are flaws in keeping things like this on paper or in notes on my phone. I want Wikipies to be a hub for users to store their own recipes, and potentially read others. Using user profiles to store specific users own recipes to easily be found on their individual pages. Users that do not log in will still be able to read the recipes but not upload, edit, or delete any recipes on the site. 
+I wanted to create a recipe database long before I started the Code Institute program. As a chef, there are flaws in keeping things like this on paper or in notes on my phone. I want Wikipes to be a hub for users to store their own recipes, and potentially read others. Using user profiles to store specific users own recipes to easily be found on their individual pages. Users that do not log in will still be able to read the recipes but not upload, edit, or delete any recipes on the site. 
 <br>
 ### Potential User Stories.
+
 > *New Users*
 > > A new user enters the site with an intention to either read older recipes or upload their own recipes. If the new user wants to upload one of their own recipes, the user have to navigate to the profile and create their own new profile, then the user will ge given access to the page that is used for uploading a new recipe. 
+
 > *Existing Users*
 > > An existing user navigates to the site with intentions to either, read old recipes, upload a new recipe and/or delete or update an existing recipe. 
 The existing user has to be logged in to the site to be able to view their profile which will view the users uploaded recipes that's tied to the userID stored in a database. By this measure the logged in user has full CRUD rights to their own uploaded recipes, but not users with a different userID's. 
-> *Admin Users*
-> > Admin users using wikipies for a "admin purpose" will have CRUD rights to any recipe to prevent spam and/or content that is not relevant to storing recipes.
 
-** User flowchart and project wireframe can be found in /documentation **
+> *Admin Users*
+> > Admin users using wikipes for a "admin purpose" will have CRUD rights to any recipe to prevent spam and/or content that is not relevant to storing recipes.
+
+**User flowchart and project wireframe can be found in /documentation**
+
+> *CRUD Functionality for users*
+> > To create a new recipe the loged in user navigates to the "Upload Recipe" page, found in the top right corner. (if the user is not logged in the use will be prompted before being able to upload a new recipe) Here the user will fill in valuable information regarding the recipe. Category, A name, description, ingredients and allergens. If the user wants to edit one of his/hers existing recipes, navigating to your recipes will list your uploaded recipes and give the user an option to edit the recipe, this will also show on the frontpage for the specific recipes tied to the userID. <br> The steps to delete a recipe is very similar to editing a recipe, the delete option is located next to the edit button on either the "Your recipe" and frontpages.
+
+
 
 
 ## 2. Updates Timeline.
