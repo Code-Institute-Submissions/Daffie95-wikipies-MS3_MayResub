@@ -16,16 +16,18 @@
 
 
 ## 1. Project Planning.
-I wanted to create a recipe database long before I started the Code Institute program. As a chef, there are flaws in keeping things like this on paper or in notes on my phone. So I made a simple and intuitive recipe database for users to store their recipes, either for their own sake or to share it. 
+I wanted to create a recipe database long before I started the Code Institute program. As a chef, there are flaws in keeping things like this on paper or in notes on my phone. I want Wikipies to be a hub for users to store their own recipes, and potentially read others. Using user profiles to store specific users own recipes to easily be found on their individual pages. Users that do not log in will still be able to read the recipes but not upload, edit, or delete any recipes on the site. 
 <br>
-<br>
-Users will be enabled to create accounts to upload, edit, and delete their recipes. 
-<br>
-<br>
-Users that do not log in will still be able to read the recipes but not upload, edit, or delete any recipes on the site. 
-<br>
-<br>
-Wireframe and a user flowchart can be found in /documentation.
+### Potential User Stories.
+> *New Users*
+> > A new user enters the site with an intention to either read older recipes or upload their own recipes. If the new user wants to upload one of their own recipes, the user have to navigate to the profile and create their own new profile, then the user will ge given access to the page that is used for uploading a new recipe. 
+> *Existing Users*
+> > An existing user navigates to the site with intentions to either, read old recipes, upload a new recipe and/or delete or update an existing recipe. 
+The existing user has to be logged in to the site to be able to view their profile which will view the users uploaded recipes that's tied to the userID stored in a database. By this measure the logged in user has full CRUD rights to their own uploaded recipes, but not users with a different userID's. 
+> *Admin Users*
+> > Admin users using wikipies for a "admin purpose" will have CRUD rights to any recipe to prevent spam and/or content that is not relevant to storing recipes.
+
+** User flowchart and project wireframe can be found in /documentation **
 
 
 ## 2. Updates Timeline.
