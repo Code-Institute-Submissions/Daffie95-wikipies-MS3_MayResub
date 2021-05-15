@@ -16,13 +16,13 @@
 
 
 ## 1. Project Planning.
-I wanted to create a recipe database long before I started the Code Institute programme. As a chef there are flaws in keeping things like this on paper or in notes on my phone. So I made a simple and intuitive recipe database for users to store their recipes, either for their own sake or to share it. 
+I wanted to create a recipe database long before I started the Code Institute program. As a chef, there are flaws in keeping things like this on paper or in notes on my phone. So I made a simple and intuitive recipe database for users to store their recipes, either for their own sake or to share it. 
 <br>
 <br>
 Users will be enabled to create accounts to upload, edit, and delete their recipes. 
 <br>
 <br>
-Users that does not log in will still be able to read the recipes but not upload, edit, or delete any recipes on the site. 
+Users that do not log in will still be able to read the recipes but not upload, edit, or delete any recipes on the site. 
 <br>
 <br>
 Wireframe and a user flowchart can be found in /documentation.
@@ -107,10 +107,10 @@ Wireframe and a user flowchart can be found in /documentation.
 
 1. 2021-03-14
 > **Expected Result:**
-> > Applying a Jinja for loop in front_page.html would render on screen in the preview.
+> > Applying a Jinja for loop in front_page.html would render on-screen in the preview.
 
 > **Actual Result:**
-> > The Jinja for loop renders the HTML element to store the database data from MongoDB but renders the elements empty, regardless of the database thats injected
+> > The Jinja for loop renders the HTML element to store the database data from MongoDB but renders the elements empty, regardless of the database that's injected
 
 > **Resolved Y/N:**
 > > ***Y 2021-03-14***
@@ -139,21 +139,21 @@ Wireframe and a user flowchart can be found in /documentation.
 
 4. 2021-03-16
 > **Expected Result:**
-> > creating CSS code targeting elements in the html should change the appearance of the output
+> > creating CSS code targeting elements in the HTML should change the appearance of the output
 
 > **Actual Result:**
-> > The CSS code does not change the appearance of the html, it does work with in-line customization however.
+> > The CSS code does not change the appearance of the HTML, it does work with in-line customization, however.
 
 > **Resolved Y/N:**
-> > ***Y 2021-03-16*** - Due to not having an online preview that could read jinja I had to push the css changes to main to display them on the live page.(not best practice)
+> > ***Y 2021-03-16*** - Due to not having an online preview that could read jinja I had to push the CSS changes to main to display them on the live page. (not best practice)
 
 ## 5. Additional Comments.
 The commits are somewhat inconsistent, the later ones will use the description to specify the changes in the files. 
 I am using GitHub Desktop and it was simply more effective for me to write in the description.
 <hr>
-I have not found a way to visualize functional previews of jinja code on VsCode, thus the large ammount of commits to the main branch.<br>
-I pushed commits for testing to push changes to heroku and to display the changes made in the code. This did force me to push multiple commits with the same
-description to declare what I was working on, more like workin on a separate branch, but instead doing testing on main. I appologize for the large ammounts of commits.
+I have not found a way to visualize functional previews of jinja code on VsCode, thus a large number of commits to the main branch.<br>
+I pushed commits for testing to push changes to Heroku and to display the changes made in the code. This did force me to push multiple commits with the same
+description to declare what I was working on, more like working on a separate branch, but instead doing testing on main. I apologize for the large amounts of commits.
 
 ## 6. External Resources.
 [MaterializeCSS Documentation](https://materializecss.com/)<br>
@@ -162,7 +162,7 @@ CI Data Centric Modules (MongoDB / Mini Project)
 
 
 ## 7. Testing.
-Accepted state would be if user is redirected to the correct link or if a message is displayed if credentials are not met. If measures are met answer will be "works".
+The accepted state would be if the user is redirected to the correct link or if a message is displayed if credentials are not met. If measures are met answer will be "works".
 
 | links | registrating | login | upload recipe | profile | log out | search | edit recipe | delete |  |
 |-|-|-|-|-|-|-|-|-|-|
@@ -176,16 +176,16 @@ Accepted state would be if user is redirected to the correct link or if a messag
 
 
 ## 8. Conclusions.
-Due to some extensive computer issues this project has ben put under intense time restraints, once again I would like to reach out and thank CI Student Counceling for their understanding and very helpful ways.
+Due to some extensive computer issues, this project has been put under intense time restraints, once again I would like to reach out and thank CI Student Counseling for their understanding and very helpful ways.
 <hr>
-Even with the time restrictions I actually enjoyed this project very much. This is probobly because I actually had extended ammounts of time instead having to go away and focus on people thats sick (that does need my help), this helped me massively with focus and dedication.
-I very much enjoy working with Back-End intergration and I have learned massively from this.
+Even with the time restrictions, I enjoyed this project very much. This is probably because I had extended amounts of time instead of having to go away and focus on people that are sick (that do need my help), this helped me massively with focus and dedication.
+I very much enjoy working with Back-End integration and I have learned massively from this.
 <hr>
 
-Some jinja rendering is basic, and the output for recipes from the database could have been "prettier", but to me it does its job and works.
+Some jinja rendering is basic, and the output for recipes from the database could have been "prettier", but to me, it does its job and works.
 <hr>
-While this project is heavily influenced by the mini-project, I only reasearched the source code when there were issues I did not know how to fix and I implemented it myself. 
+While this project is heavily influenced by the mini-project, I only researched the source code when there were issues I did not know how to fix and I implemented it myself. 
 <hr>
-While I believe this could have been made much flashier, (as always) I wanted to focus my time where I felt it needed, with the timelimit I had I chose to not do extensive styling or use crazy images, the goal I had was a simple database collection thats intergrated on the page to be displayed and accessed by users. 
+While I believe this could have been made much flashier, (as always) I wanted to focus my time where I felt it needed, with the time limit I had I chose to not do extensive styling or use crazy images, the goal I had was a simple database collection that's integrated on the page to be displayed and accessed by users. 
 <hr>
-MS2 was quite horrible for me, as there were too many things pulling me away from my studies, and this time around I had some really bad PC issues with bluescreens and having to run the computer in safemode without network to try to fix it. Eventually I fixed the issue and here we are. This project actually made me prove to myself that this is something I actually enjoy and are capable of completing, and I am so happy I pulled through and completed it. 
+MS2 was quite horrible for me, as there were too many things pulling me away from my studies, and this time around I had some really bad PC issues with bluescreens and having to run the computer in safe mode without a network to try to fix it. Eventually, I fixed the issue and here we are. This project made me prove to myself that this is something I enjoy and am capable of completing, and I am so happy I pulled through and completed it. 
