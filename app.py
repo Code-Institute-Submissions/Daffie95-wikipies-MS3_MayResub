@@ -31,6 +31,8 @@ mongo = PyMongo(app)
 # })
 
 # route function to ensure that any empty routes renders the frontpage
+
+
 @app.route("/")
 # route function to render the frontpage and all current recepies
 @app.route("/frontpage")
@@ -39,6 +41,8 @@ def frontpage():
     return render_template('front_page.html', recipes=recipes)
 
 # route function to render the search function
+
+
 @app.route("/search", methods=["GET", "POST"])
 def search():
     # using indexing on the database to create a search function
@@ -47,6 +51,8 @@ def search():
     return render_template("front_page.html", recipes=recipes)
 
 # route function to render the register page
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -62,13 +68,15 @@ def register():
             "firstname": request.form.get("firstname").lower(),
             "lastname": request.form.get("lastname").lower(),
             "username": request.form.get("username").lower(),
-            "password": generate_password_hash(request.form.get("password").lower())
+            "password": generate_password_hash(
+                request.form.get("password").lower())
         }
         mongo.db.users.insert_one(register)
-        # function to check wether user credentials are in the database and put user in session
+        # function to check wether user credentials are in
+        #  the database and put user in session
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful!")
-        return redirect(url_for("profile", username=session["user"]))   
+        return redirect(url_for("profile", username=session["user"]))
     return render_template('register_page.html')
 
 
@@ -102,6 +110,8 @@ def login():
     return render_template('login_page.html')
 
 # route function to log out current session user with .pop()
+
+
 @app.route("/logout")
 def logout():
     flash("You have logged out")
@@ -116,21 +126,24 @@ def profile(username):
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
     if session["user"]:
-        return render_template("profile_page.html", username=username, recipes=recipes)
+        return render_template(
+            "profile_page.html", username=username, recipes=recipes)
 
 
 # route function for uploading new recipes
 @app.route("/upload_recipe", methods=["GET", "POST"])
 def upload_recipe():
     if request.method == "POST":
-        # function to make the switch toggle on/off values in the dictionary "recipe"
+        # function to make the switch toggle on/off
+        # values in the dictionary "recipe"
         gluten = "on" if request.form.get("gluten") else "off"
         lactose = "on" if request.form.get("lactose") else "off"
         nuts = "on" if request.form.get("nuts") else "off"
         peanuts = "on" if request.form.get("peanuts") else "off"
         shellfish = "on" if request.form.get("shellfish") else "off"
         fish = "on" if request.form.get("fish") else "off"
-        # the dictionary pulls content from the input fields on upload_page.html
+        # the dictionary pulls content from the
+        #  input fields on upload_page.html
         # and inserts it into the database
         new_recipe = {
             "recipe_name": request.form.get("recipe_name"),
@@ -157,7 +170,8 @@ def upload_recipe():
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
     if request.method == "POST":
-        # function to make the switch toggle on/off values in the dictionary "recipe"
+        # function to make the switch toggle on/off
+        # values in the dictionary "recipe"
         gluten = "on" if request.form.get("gluten") else "off"
         lactose = "on" if request.form.get("lactose") else "off"
         nuts = "on" if request.form.get("nuts") else "off"
