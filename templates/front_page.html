@@ -23,10 +23,10 @@
 
 {% if session.user %}
                        <div>
-                        <p class="frontpage"><a href="{{ urlf_for('upload.page') }}">Login</a> to upload your own favorite recipes</p>  
+                        <p class="frontpage"><a href="{{ urlf_for('login') }}">Login</a> to upload your own favorite recipes</p>  
                        </div>
                     {% else %}
-                    <p class="frontpage">Go to upload a <a href="{{ urlf_for('upload.page') }}">new recipe</a></p>
+                    <p class="frontpage">Go to upload a <a href="{{ urlf_for('upload_recipe') }}">new recipe</a></p>
                     {% endif %}
 {% if recipes|length > 0 %}
 
