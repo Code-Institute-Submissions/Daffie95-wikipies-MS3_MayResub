@@ -106,7 +106,7 @@ The existing user has to be logged in to the site to be able to view their profi
 > ~~Implement Updating Recipes<br>~~
 > ~~Implement Deleting Recipes<br>~~
 > ~~Implement Functional Registration~~<br>
-> Update Project Planning<br>
+> ~~Update Project Planning<br>~~
 > ~~style buttons to all look the same<br>~~
 > ~~Style nav<br>~~
 > ~~Style text content<br>~~
