@@ -20,8 +20,8 @@ mongo = PyMongo(app)
 
 db.createUser(
 {
-    user: os.environ.get("ADMIN_USER"),
-    pwd: os.environ.get("ADMIN_PW"),
+    username: os.environ.get("ADMIN_USER"),
+    password: os.environ.get("ADMIN_PW"),
     roles: [
               { role: "userAdminAnyDatabase", db: "admin" },
               { role: "readWriteAnyDatabase", db: "admin" },
