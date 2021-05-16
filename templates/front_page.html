@@ -26,7 +26,11 @@
   </form>
 </div>
 
-{% if session.user %}
+<div>
+  <p>Below is a list of uploaded recipes, If you are having troubles finding a recipe try searching for it!</p>
+</div>
+
+<!-- {% if session.user %}
 <div>
   <p class="frontpage">
     Go to upload a <a class="rotateColors" href="{{ url_for('upload_recipe') }}">new recipe</a>
@@ -36,7 +40,7 @@
 <p class="frontpage">
   <a class="rotateColors" href="{{ url_for('login') }}">Login</a> to upload your own favorite recipes
 </p>
-{% endif %}
+{% endif %} -->
 
 {% if recipes|length > 0 %}
 
@@ -119,3 +123,14 @@
 {% else %}
 <h4 class="red-text text-lighten-1 center align">No Recipes Found</h4>
 {% endif %} {% endblock %}
+
+{% if session.user %}
+<div class="footer-text"><p>
+    Do you want to upload your own recipe? Go to <a class="footer-link" href="{{ url_for('upload_Recipe') }}">Upload Recipe</a>
+  </p>
+  {% else %}
+
+  <p>
+  Do you want to upload your own recipe? You have to be loged in, <a class="footer-link" href="{{ url_for('register') }}">Register</a> or <a class="footer-link" href="{{ url_for('login') }}">Login</a>
+  </p>
+{% endif %}
