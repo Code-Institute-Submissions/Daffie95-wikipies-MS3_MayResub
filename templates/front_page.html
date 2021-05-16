@@ -27,7 +27,10 @@
 </div>
 
 <div>
-  <p>Below is a list of uploaded recipes, If you are having troubles finding a recipe try searching for it!</p>
+  <p>
+    Below is a list of uploaded recipes. Are you having troubles finding a
+    recipe, try searching for it!
+  </p>
 </div>
 
 <!-- {% if session.user %}
@@ -122,15 +125,27 @@
 </ul>
 {% else %}
 <h4 class="red-text text-lighten-1 center align">No Recipes Found</h4>
-{% endif %} {% endblock %}
+
+{% endif %}
+{% endblock %}
 
 {% if session.user %}
-<div class="footer-text"><p>
-    Do you want to upload your own recipe? Go to <a class="footer-link" href="{{ url_for('upload_Recipe') }}">Upload Recipe</a>
-  </p>
-  {% else %}
-
+<div class="footer-text">
   <p>
-  Do you want to upload your own recipe? You have to be loged in, <a class="footer-link" href="{{ url_for('register') }}">Register</a> or <a class="footer-link" href="{{ url_for('login') }}">Login</a>
+    Do you want to upload your own recipe? Go to
+    <a class="footer-link" href="{{ url_for('upload_Recipe') }}"
+      >Upload Recipe</a
+    >
   </p>
+</div>
+{% else %}
+
+<div class="footer-text">
+  <p>
+    Do you want to upload your own recipe? You have to be loged in,
+    <a class="footer-link" href="{{ url_for('register') }}">Register</a> or
+    <a class="footer-link" href="{{ url_for('login') }}">Login</a>
+  </p>
+</div>
+
 {% endif %}
