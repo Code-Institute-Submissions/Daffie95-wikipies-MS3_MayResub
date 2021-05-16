@@ -1,3 +1,23 @@
+
+body {
+  font-family: arial;
+}
+
+p{
+  font-size: 35px;
+}
+
+a.rotateColors {
+    color: rgb(236,100,75);
+    animation: rotateColors 20s infinite;
+    text-align: center;
+    font-size: 45px;
+    margin-top: 50vh;
+    transform: translateY(-50%);
+    text-decoration: none;
+  
+}
+
 @keyframes rotateColors {
   from, to { color: rgb(236,100,75); }
   10%      { color: rgb(219,10,91); }
@@ -9,25 +29,6 @@
   70%      { color: rgb(233,212,96); }
   80%      { color: rgb(243,156,18); }
   90%      { color: rgb(236,240,241); }
-}
-
-body {
-  font-family: arial;
-}
-
-p{
-  font-size: 35px;
-}
-
-a {
-    color: rgb(236,100,75);
-    animation: rotateColors 20s infinite;
-    text-align: center;
-    font-size: 45px;
-    margin-top: 50vh;
-    transform: translateY(-50%);
-    text-decoration: none;
-  
 }
 
 .text-shadow {
@@ -57,5 +58,6 @@ nav ul a {
 .card-panel {
   margin-top: 30px;
 }
+
 
 

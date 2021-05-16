@@ -1,94 +1,119 @@
-{% extends "base.html" %}
-{% block content %}
+{% extends "base.html" %} {% block content %}
 
 <h3 class="center-align">All Recipes</h3>
 
 <div class="row card-panel red accent-2">
-    <form action="{{ url_for('search') }}" method="post" class="col s12">
-        <div class="row valign-wrapper center-align">
-            <div class="input-field col s12 m8">
-                <i class="material-icons prefix white-text">search</i><input type="text" name="search" id="search"
-                    class="validate" required>
-                <label for="search" class="white-text">Recipe Search</label>
-            </div>
-            <div class="col s12 m3">
-                <a href="{{ url_for('frontpage') }}" class="btn amber darken-3">Clear</a>
-                <button type="submit" class="green lighten-1 btn">
-                    Search
-                </button>
-            </div>
-        </div>
-    </form>
+  <form action="{{ url_for('search') }}" method="post" class="col s12">
+    <div class="row valign-wrapper center-align">
+      <div class="input-field col s12 m8">
+        <i class="material-icons prefix white-text">search</i
+        ><input
+          type="text"
+          name="search"
+          id="search"
+          class="validate"
+          required
+        />
+        <label for="search" class="white-text">Recipe Search</label>
+      </div>
+      <div class="col s12 m3">
+        <a href="{{ url_for('frontpage') }}" class="btn amber darken-3"
+          >Clear</a
+        >
+        <button type="submit" class="green lighten-1 btn">Search</button>
+      </div>
+    </div>
+  </form>
 </div>
 
 {% if session.user %}
-                       <div>
-                        <p class="frontpage"><a href="{{ url_for('login') }}">Login</a> to upload your own favorite recipes</p>  
-                       </div>
-                    {% else %}
-                    <p class="frontpage">Go to upload a <a href="{{ url_for('upload_recipe') }}">new recipe</a></p>
-                    {% endif %}
-{% if recipes|length > 0 %}
+<div>
+  <p class="frontpage">
+    Go to upload a <a class="rotateColors" href="{{ url_for('upload_recipe') }}">new recipe</a>
+  </p>
+</div>
+{% else %}
+<p class="frontpage">
+  <a class="rotateColors" href="{{ url_for('login') }}">Login</a> to upload your own favorite recipes
+</p>
+{% endif %} {% if recipes|length > 0 %}
 
 <ul class="collapsible poput">
-    {% for recipe in recipes %}
-    <li>
-        <div class="collapsible-header red accent-2 col s12">
-            <div class="col s3">
-                {% if session.user|lower == recipe.created_by|lower %}
-                <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-small amber darken-3">Edit</a>
-                <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn-small green darken-4">Delete</a>
-                {% endif %}
-            </div>
-            <div class="col s9">
-                <strong>{{ recipe.recipe_name|capitalize }}</strong> Written by: {{ recipe.created_by|capitalize }}
-                {% if recipe.gluten == "on" %}
-                <i class="material-icons white-text tooltipped" data-position="top"
-                    data-tooltip="Contains Gluten">looks_one</i>
-                {% endif %}
-                {% if recipe.lactose == "on" %}
-                <i class="material-icons white-text tooltipped" data-position="top"
-                    data-tooltip="Contains Lactose">looks_two</i>
-                {% endif %}
-                {% if recipe.nuts == "on" %}
-                <i class="material-icons white-text tooltipped" data-position="top"
-                    data-tooltip="Contains Nuts">looks_3</i>
-                {% endif %}
-                {% if recipe.peanuts == "on" %}
-                <i class="material-icons white-text tooltipped" data-position="top"
-                    data-tooltip="Contains Peanuts">looks_4</i>
-                {% endif %}
-                {% if recipe.shellfish == "on" %}
-                <i class="material-icons white-text tooltipped" data-position="top"
-                    data-tooltip="Contains Shellfish">looks_5</i>
-                {% endif %}
-                {% if recipe.fish == "on" %}
-                <i class="material-icons white-text tooltipped" data-position="top"
-                    data-tooltip="Contains Fish">looks_6</i>
-                {% endif %}
-            </div>
-        </div>
-        <div class="collapsible-body">
-            <strong>This is a {{ recipe.category|capitalize }} recipe</strong>
-            <p>{{ recipe.recipe_desc }}</p>
-            <strong>ingredients needed:</strong>
-            <p>{{ recipe.ingredients|capitalize }}</p>
-            <strong>Steps:</strong>
-            <p>{{ recipe.steps }}</p>
-        </div>
-    </li>
-    {% endfor %}
+  {% for recipe in recipes %}
+  <li>
+    <div class="collapsible-header red accent-2 col s12">
+      <div class="col s3">
+        {% if session.user|lower == recipe.created_by|lower %}
+        <a
+          href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
+          class="btn-small amber darken-3"
+          >Edit</a
+        >
+        <a
+          href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
+          class="btn-small green darken-4"
+          >Delete</a
+        >
+        {% endif %}
+      </div>
+      <div class="col s9">
+        <strong>{{ recipe.recipe_name|capitalize }}</strong> Written by: {{
+        recipe.created_by|capitalize }} {% if recipe.gluten == "on" %}
+        <i
+          class="material-icons white-text tooltipped"
+          data-position="top"
+          data-tooltip="Contains Gluten"
+          >looks_one</i
+        >
+        {% endif %} {% if recipe.lactose == "on" %}
+        <i
+          class="material-icons white-text tooltipped"
+          data-position="top"
+          data-tooltip="Contains Lactose"
+          >looks_two</i
+        >
+        {% endif %} {% if recipe.nuts == "on" %}
+        <i
+          class="material-icons white-text tooltipped"
+          data-position="top"
+          data-tooltip="Contains Nuts"
+          >looks_3</i
+        >
+        {% endif %} {% if recipe.peanuts == "on" %}
+        <i
+          class="material-icons white-text tooltipped"
+          data-position="top"
+          data-tooltip="Contains Peanuts"
+          >looks_4</i
+        >
+        {% endif %} {% if recipe.shellfish == "on" %}
+        <i
+          class="material-icons white-text tooltipped"
+          data-position="top"
+          data-tooltip="Contains Shellfish"
+          >looks_5</i
+        >
+        {% endif %} {% if recipe.fish == "on" %}
+        <i
+          class="material-icons white-text tooltipped"
+          data-position="top"
+          data-tooltip="Contains Fish"
+          >looks_6</i
+        >
+        {% endif %}
+      </div>
+    </div>
+    <div class="collapsible-body">
+      <strong>This is a {{ recipe.category|capitalize }} recipe</strong>
+      <p>{{ recipe.recipe_desc }}</p>
+      <strong>ingredients needed:</strong>
+      <p>{{ recipe.ingredients|capitalize }}</p>
+      <strong>Steps:</strong>
+      <p>{{ recipe.steps }}</p>
+    </div>
+  </li>
+  {% endfor %}
 </ul>
 {% else %}
 <h4 class="red-text text-lighten-1 center align">No Recipes Found</h4>
-{% endif %}
-
-
-
-
-
-
-
-
-
-{% endblock %}
+{% endif %} {% endblock %}
