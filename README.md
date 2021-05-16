@@ -12,7 +12,8 @@
 5. Additional Comments.
 6. External Resources.
 7. Testing. (see separate folder in /documentation)
-8. Conclusion.
+8. Deployment
+9. Conclusion.
 
 
 ## 1. Project Planning.
@@ -170,8 +171,16 @@ description to declare what I was working on, more like working on a separate br
 [StackOverflow]([www.stackoverflow.com](https://stackoverflow.com/))<br>
 CI Data Centric Modules (MongoDB / Mini Project)
 
+## 8. Deployment
+> Deployment will be processed trough Heroku and uses automatic deploys trough GitHub connections. Sensitive information is stored in Config Vars hosted on the Heroku backend.
+> > This site is catering to an easy access for users to find and store recipes and should be simple to access. <br>
+> > 1. A procfile is created to declare that the application we want to run is a webb application that uses Python and runs trough the app.py python file.<br>
+> > 2. A requirements.txt file is created using the *pip3 freeze* command to make sure that Heroku has the required assets to run the application. <br>
+> > 3. Add the relevant config variables to Herokus Config vars, this makes sure that critical information stays hidden to users that uses the site. Such as ports and IP's used, aswell as the connection to the Database.<br>
+> > 4. Connect the GitHub repository to the Heroku webb app and enable automatic deployment to keep the live webb app automatically up to date.<br>
+> > 5. test webb application functionality (read more in testing)
 
-## 8. Conclusions.
+## 9. Conclusions.
 Due to some extensive computer issues, this project has been put under intense time restraints, once again I would like to reach out and thank CI Student Counseling for their understanding and very helpful ways.
 <hr>
 Even with the time restrictions, I enjoyed this project very much. This is probably because I had extended amounts of time instead of having to go away and focus on people that are sick (that do need my help), this helped me massively with focus and dedication.
