@@ -26,17 +26,21 @@
   </form>
 </div>
 
+{% endif %} 
+
 {% if session.user %}
 <div>
   <p class="frontpage">
-    Go to upload a <a class="fp-link" href="{{ url_for('upload_recipe') }}">new recipe</a>
+    Go to upload a <a class="rotateColors" href="{{ url_for('upload_recipe') }}">new recipe</a>
   </p>
 </div>
 {% else %}
 <p class="frontpage">
-  <a class="fp-link" href="{{ url_for('login') }}">Login</a> to upload your own favorite recipes
+  <a class="rotateColors" href="{{ url_for('login') }}">Login</a> to upload your own favorite recipes
 </p>
-{% endif %} {% if recipes|length > 0 %}
+{% endif %}
+
+{% if recipes|length > 0 %}
 
 <ul class="collapsible poput">
   {% for recipe in recipes %}
