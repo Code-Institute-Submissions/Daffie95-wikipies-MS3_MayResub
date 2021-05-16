@@ -11,7 +11,7 @@
 4. Bugs & Errors.
 5. Additional Comments.
 6. External Resources.
-7. Testing.
+7. Testing. (see separate folder in /documentation)
 8. Conclusion.
 
 
@@ -169,20 +169,6 @@ description to declare what I was working on, more like working on a separate br
 [MaterializeCSS Documentation](https://materializecss.com/)<br>
 [StackOverflow]([www.stackoverflow.com](https://stackoverflow.com/))<br>
 CI Data Centric Modules (MongoDB / Mini Project)
-
-
-## 7. Testing.
-The accepted state would be if the user is redirected to the correct link or if a message is displayed if credentials are not met. If measures are met answer will be "works".
-
-| links | registrating | login | upload recipe | profile | log out | search | edit recipe | delete |  |
-|-|-|-|-|-|-|-|-|-|-|
-| all works | works | works | works | works | works | works | works | works |  |
-<hr>
-
-
-
-
- 
 
 
 ## 8. Conclusions.
