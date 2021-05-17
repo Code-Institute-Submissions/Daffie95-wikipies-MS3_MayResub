@@ -2,6 +2,7 @@
 
 <h3 class="center-align">All Recipes</h3>
 
+
 <div class="row card-panel red accent-2">
   <form action="{{ url_for('search') }}" method="post" class="col s12">
     <div class="row valign-wrapper center-align">
@@ -14,7 +15,7 @@
           class="validate"
           required
         />
-        <label for="search" class="white-text">Recipe Search</label>
+        <label for="search" class="black-text">Recipe Search</label>
       </div>
       <div class="col s12 m3">
         <a href="{{ url_for('frontpage') }}" class="btn amber darken-3"
@@ -33,12 +34,15 @@
   </p>
 </div>
 
+
+ 
 {% if recipes|length > 0 %}
 
 <ul class="collapsible poput">
+  
   {% for recipe in recipes %}
   <li>
-    <div class="collapsible-header red accent-2 col s12">
+    <div class="collapsible-header red accent-2 col s9">
       <div class="col s3">
         {% if session.user|lower == recipe.created_by|lower %}
         <a
