@@ -41,6 +41,7 @@ The existing user has to be logged in to the site to be able to view their profi
 
 ## 2. Updates Timeline.
 > 0.4 **2021-05-17**
+> > Final Push<br>
 > > Removed comments <br>
 > > Turned off DEBUG <br>
 > > Completed testing<br>
