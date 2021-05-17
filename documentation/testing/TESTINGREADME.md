@@ -22,6 +22,8 @@ Screenshot stored in /testing/images.
 ### 4. Editing a recipe:
 > Editing an existing recipe completes as intended and returns a succesfull status=302 to redirect the user to the frontpage. [*Screenshot from Heroku*](https://gyazo.com/60b80f7fdc08e09de2da59f4eddf1649)<br>
 **Editing an existing recipe works as intended**
+### 5. Deleting a recipe:
+> Deleting an existing recipe completes as intended and returns a succesfull status=302 to redirect the user to the frontpage. [*Screenshot from Heroku*](https://gyazo.com/a84d1ad5c56312cfe8768b709374bcb4)
 
 ## K6 Performance 
 screenshot stored in /testing/images
