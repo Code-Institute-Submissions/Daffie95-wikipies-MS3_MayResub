@@ -41,6 +41,8 @@ The existing user has to be logged in to the site to be able to view their profi
 
 ## 2. Updates Timeline.
 > 0.4 **2021-05-17**
+> > Turned off DEBUG <br>
+> > Completed testing<br>
 > > Added overline styling to recipe names.<br>
 > > added text on the frontpage to lead users towards functionality on the page.<br>
 > > Added toast callback with information about the toast button to be re-clickable.<br>
