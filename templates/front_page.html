@@ -2,7 +2,6 @@
 
 <h3 class="center-align">All Recipes</h3>
 
-
 <div class="row card-panel red accent-2">
   <form action="{{ url_for('search') }}" method="post" class="col s12">
     <div class="row valign-wrapper center-align">
@@ -33,12 +32,9 @@
   </p>
 </div>
 
-
- 
 {% if recipes|length > 0 %}
 
 <ul class="collapsible poput">
-  
   {% for recipe in recipes %}
   <li>
     <div class="collapsible-header red accent-2 col s9">
@@ -57,8 +53,8 @@
         {% endif %}
       </div>
       <div class="col s9">
-        <strong class="recipe-name">{{ recipe.recipe_name|capitalize }}</strong> by: {{
-        recipe.created_by|capitalize }} {% if recipe.gluten == "on" %}
+        <strong class="recipe-name">{{ recipe.recipe_name|capitalize }}</strong>
+        by: {{ recipe.created_by|capitalize }} {% if recipe.gluten == "on" %}
         <i
           class="material-icons white-text tooltipped"
           data-position="top"
@@ -117,9 +113,7 @@
 {% else %}
 <h4 class="red-text text-lighten-1 center align">No Recipes Found</h4>
 
-{% endif %}
-
-{% if session.user %}
+{% endif %} {% if session.user %}
 <div class="footer-text">
   <p class="footer-text flow-text">
     Do you want to upload your own recipe? Go to
@@ -138,7 +132,4 @@
   </p>
 </div>
 
-{% endif %}
-{% endblock %}
-
-
+{% endif %} {% endblock %}
