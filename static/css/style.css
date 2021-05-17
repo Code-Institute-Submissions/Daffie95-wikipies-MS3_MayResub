@@ -1,4 +1,3 @@
-
 body {
   display: flex;
   min-height: 100vh;
@@ -39,6 +38,9 @@ nav ul a {
 
 .recipe-name {
   font-size: 1.4rem;
+  text-decoration: overline;
+  text-decoration-color: #66bb6a;
+  text-decoration-thickness: from-font;
 }
 
 .footer-text, .frontpage-text{
@@ -49,6 +51,3 @@ nav ul a {
 .page-footer {
   margin-top: 4rem;
 }
-
-
-
