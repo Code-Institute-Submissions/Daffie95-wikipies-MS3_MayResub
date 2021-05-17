@@ -26,24 +26,12 @@
   </form>
 </div>
 
-<div>
-  <p>
-    Below is a list of uploaded recipes. Are you having troubles finding a
-    recipe, try searching for it!
+<div class="">
+  <p class="frontpage-text flow-text">
+    Here is a list of all uploaded recipes. Are you having troubles finding a
+    specific one? try searching for it!
   </p>
 </div>
-
-<!-- {% if session.user %}
-<div>
-  <p class="frontpage">
-    Go to upload a <a class="rotateColors" href="{{ url_for('upload_recipe') }}">new recipe</a>
-  </p>
-</div>
-{% else %}
-<p class="frontpage">
-  <a class="rotateColors" href="{{ url_for('login') }}">Login</a> to upload your own favorite recipes
-</p>
-{% endif %} -->
 
 {% if recipes|length > 0 %}
 
@@ -66,7 +54,7 @@
         {% endif %}
       </div>
       <div class="col s9">
-        <strong>{{ recipe.recipe_name|capitalize }}</strong> Written by: {{
+        <strong class="recipe-name">{{ recipe.recipe_name|capitalize }}</strong> Written by: {{
         recipe.created_by|capitalize }} {% if recipe.gluten == "on" %}
         <i
           class="material-icons white-text tooltipped"
@@ -127,21 +115,20 @@
 <h4 class="red-text text-lighten-1 center align">No Recipes Found</h4>
 
 {% endif %}
-{% endblock %}
 
 {% if session.user %}
 <div class="footer-text">
-  <p>
+  <p class="footer-text flow-text">
     Do you want to upload your own recipe? Go to
-    <a class="footer-link" href="{{ url_for('upload_Recipe') }}"
+    <a class="footer-link" href="{{ url_for('upload_recipe') }}"
       >Upload Recipe</a
     >
   </p>
 </div>
 {% else %}
 
-<div class="footer-text">
-  <p>
+<div class="container">
+  <p class="footer-text flow-text">
     Do you want to upload your own recipe? You have to be loged in,
     <a class="footer-link" href="{{ url_for('register') }}">Register</a> or
     <a class="footer-link" href="{{ url_for('login') }}">Login</a>
@@ -149,3 +136,6 @@
 </div>
 
 {% endif %}
+{% endblock %}
+
+
