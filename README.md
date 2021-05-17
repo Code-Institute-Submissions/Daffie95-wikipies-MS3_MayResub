@@ -40,6 +40,15 @@ The existing user has to be logged in to the site to be able to view their profi
 
 
 ## 2. Updates Timeline.
+> 0.4 **2021-05-17**
+> > added text on the frontpage to lead users towards functionality on the page.
+> > Added toast callback with information about the toast button to be re-clickable
+> > Added allergens button with toast to display information to what which icon means.
+> > removed allergens tooltipped JQuery as it was no longer used.<br>
+> > added footer text, links and color to match the rest of the page<br>
+> > Included a footer<br>
+
+
 > 0.3 **2021-03-16**
 > > Styled webpage globally with button colors, card panels, and label texts.<br>
 > > Editing recipes now looks as intended<br>
