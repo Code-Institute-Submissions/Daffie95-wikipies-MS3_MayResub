@@ -1,9 +1,13 @@
 
 body {
-  font-family: arial imp !important;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
-
+main {
+  flex: 1 0 auto;
+}
 
 .text-shadow {
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
@@ -33,8 +37,17 @@ nav ul a {
   margin-top: 30px;
 }
 
-.footer-text{
-  text-align: center imp !important;
+.recipe-name {
+  font-size: 1.4rem;
+}
+
+.footer-text, .frontpage-text{
+  text-align: center !important;
+  font-size: 1.2rem;
+}
+
+.page-footer {
+  margin-top: 4rem;
 }
 
 
