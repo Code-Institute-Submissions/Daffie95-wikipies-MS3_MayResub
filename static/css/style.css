@@ -38,9 +38,9 @@ nav ul a {
 
 .recipe-name {
   font-size: 1.4rem;
-  text-decoration: overline;
+  text-decoration: underline;
   text-decoration-color: #66bb6a;
-  text-decoration-thickness: from-font;
+  
 }
 
 .footer-text, .frontpage-text{
