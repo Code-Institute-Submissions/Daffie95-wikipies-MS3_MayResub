@@ -18,17 +18,6 @@ app.secret_key = os.environ.get("SECRET_KEY")
 # assigning PyMongo using app(flask) to the variable mongo
 mongo = PyMongo(app)
 
-# mongodb.createUser (
-# {
-#     username: os.environ.get("ADMIN_USER"),
-#     password: os.environ.get("ADMIN_PW"),
-#     roles: [
-#               { role: "userAdminAnyDatabase", db: "admin" },
-#               { role: "readWriteAnyDatabase", db: "admin" },
-#               { role: "dbAdminAnyDatabase", db: "admin" },
-#               { role: "clusterAdmin", db: "admin" }
-#            ]
-# })
 
 # route function to ensure that any empty routes renders the frontpage
 
