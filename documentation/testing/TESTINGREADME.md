@@ -42,3 +42,9 @@ screenshot stored in /testing/images
 
 ## Python Tester
 Testing syntax on [PythonTester](https://extendsclass.com/python-tester.html) returns no syntax errors in app.py, screenshot stored in /testing/images
+
+## CSS Validator
+Testing CSS validity with [W3C CSS Validating](https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwikipe.herokuapp.com%2Ffrontpage&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=sv) returns a single error located in the materialize library.
+
+## HTML validator
+Testing HTML validity with [W3C HTML Validating](https://validator.w3.org/nu/?doc=http%3A%2F%2Fwikipe.herokuapp.com%2Ffrontpage) returns one warning that the sections lacks headings. As the page is centered around the recipes and there is nothing else on the page there are no other sections needing headers.
