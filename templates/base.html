@@ -22,7 +22,7 @@
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i
                         class="material-icons white-text">menu</i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a class="btn" onclick="M.toast({html: 'Recipes are marked with numbers: <br> 1 = Gluten <br> 2 = Lactose <br> 3 = Nuts <br> 4 = Peanuts <br> 5 = Shellfish <br> 6 = Fish', completeCallback: function(){alert('Read about the allergens marks at any point by clicking the button again')}})">Allergens</a></li>
+                    <li><a class="btn green lighten-1" onclick="M.toast({html: 'Recipes are marked with numbers: <br> 1 = Gluten <br> 2 = Lactose <br> 3 = Nuts <br> 4 = Peanuts <br> 5 = Shellfish <br> 6 = Fish', completeCallback: function(){alert('Read about the allergens marks at any point by clicking the button again')}})">Allergens</a></li>
                     <li><a href="{{ url_for('frontpage') }}">View Recipes</a></li>
                     {% if session.user %}
                         <li><a href="{{ url_for('upload_recipe') }}">Upload Recipe</a></li>
@@ -69,7 +69,7 @@
         {% endblock %}
     </main>
 
-    <footer class="page-footer">
+    <footer class="page-footer red accent-2">
         <div class="container">
           <div class="row">
             <div class="col l6 s12">
