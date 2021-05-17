@@ -22,6 +22,7 @@
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i
                         class="material-icons white-text">menu</i></a>
                 <ul class="right hide-on-med-and-down">
+                    <li><a class="btn" onclick="M.toast({html: 'Recipes are marked with numbers: <br> 1 = Gluten <br> 2 = Lactose <br> 3 = Nuts <br> 4 = Peanuts <br> 5 = Shellfish <br> 6 = Fish', completeCallback: function(){alert('Read about the allergens marks at any point by clicking the button again')}})">Allergens</a></li>
                     <li><a href="{{ url_for('frontpage') }}">View Recipes</a></li>
                     {% if session.user %}
                         <li><a href="{{ url_for('upload_recipe') }}">Upload Recipe</a></li>
@@ -68,6 +69,33 @@
         {% endblock %}
     </main>
 
+    <footer class="page-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col l6 s12">
+              <h5 class="white-text">Thank You For Using Wikipe!</h5>
+              <p class="grey-text text-lighten-4">Food is a very important part of everyday life. Regardless if you want to spoil your significant other with a fancy meal, or perhaps you need a quick meal before a workout. Wikipe was created to serve as a hub where the focus is on the recipe.
+                  If you want to find more inspiration regarding food look to the links here, these are some of our favorite food hang-outs!
+              </p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+              <h5 class="white-text">Food Inspiration</h5>
+              <ul>
+                <li><a class="grey-text text-lighten-3" href="https://www.seriouseats.com/" target="_blank">Serious Eats</a></li>
+                <li><a class="grey-text text-lighten-3" href="https://www.delicious.com.au/" target="_blank">Delicious</a></li>
+                <li><a class="grey-text text-lighten-3" href="https://www.bbcgoodfood.com/" target="_blank">BBC Good Food</a></li>
+                <li><a class="grey-text text-lighten-3" href="https://www.tasteofhome.com/" target="_blank">Taste of Home</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div class="container">
+          © 2021 Patrik Svahnström
+          
+          </div>
+        </div>
+      </footer>
 
     {% block scripts %}
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
