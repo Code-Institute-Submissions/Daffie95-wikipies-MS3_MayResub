@@ -39,3 +39,6 @@ screenshot stored in /testing/images
 > > 3. Editing a new recipe logs:<br>
 > > [*Screenshot from Heroku*](https://gyazo.com/60b80f7fdc08e09de2da59f4eddf1649)<br>
 > > Looking at these screenshots shows us that when manually practicing the functionality of the application works as intended and redirects the user to the relevant page after performing the POST method.
+
+## Python Tester
+Testing syntax on [PythonTester](https://extendsclass.com/python-tester.html) returns no syntax errors in app.py, screenshot stored in /testing/images
