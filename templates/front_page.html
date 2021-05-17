@@ -29,8 +29,7 @@
 
 <div class="">
   <p class="frontpage-text flow-text">
-    Here is a list of all uploaded recipes. Are you having troubles finding a
-    specific one? try searching for it!
+    Search for ingredients or categories if you want to find specific recipes.
   </p>
 </div>
 
@@ -58,7 +57,7 @@
         {% endif %}
       </div>
       <div class="col s9">
-        <strong class="recipe-name">{{ recipe.recipe_name|capitalize }}</strong> Written by: {{
+        <strong class="recipe-name">{{ recipe.recipe_name|capitalize }}</strong> by: {{
         recipe.created_by|capitalize }} {% if recipe.gluten == "on" %}
         <i
           class="material-icons white-text tooltipped"
